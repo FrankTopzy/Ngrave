@@ -1,0 +1,49 @@
+.sidebar {
+  transition: all 0.5s ease-out;
+}
+
+.show_sidebar {
+  right: 0;
+  transition: all 0.5s ease-in;
+}
+
+.sidebar_div {
+  padding: 96px 32px 48px;
+}
+
+.sidebar_div > div > ul > li {
+  margin-bottom : 25px;
+}
+
+
+.nav_close {
+  position: relative;
+  background: transparent;
+  height: 2px;
+  width: 28px;
+
+  transform: rotate(720deg);
+  margin-left: 20px;
+}
+
+.nav_close::after {
+  content: '';
+  height: 2px;
+  width: 100%;
+  background: var(--text-color);
+  transform: rotate(225deg) translate(-3.5px, -16px);
+
+  position: absolute;
+  top: -8px;
+}
+
+.nav_close::before {
+  content: '';
+  height: 2px;
+  width: 100%;
+  background: var(--text-color);
+  transform: rotate(135deg) translate(5px, 8px);
+
+  position: absolute;
+  bottom: -8px;
+}

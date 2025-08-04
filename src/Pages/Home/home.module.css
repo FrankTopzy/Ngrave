@@ -1,0 +1,205 @@
+.home_section1 {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)), url(../../assets/ngrave/ngrave-bg6.webp);
+  padding: 300px 15%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.banner_div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.home_context {
+  position: absolute;
+  top: 300px;
+  width: 550px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.span_text {
+  color: var(--span-text-color);
+}
+
+/*====================================== SECTION 2=======================================================*/
+
+.section2 > div{
+  display: flex;
+  gap: 40px;
+}
+
+.section2_main_img > div {
+  width: 100%;
+  border-radius: 40px;
+  overflow: hidden;
+  padding-top: 48px;
+  color: var(--grey-text);
+  display: flex;
+  flex-direction: column;
+}
+
+.section2_main_img > div > div > h1 {
+  margin-bottom: 20px;
+}
+
+.section2_main_img div h1 span {
+  font-weight: bold;
+}
+
+.section2_main_img div p {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.section2_main_img div a {
+  color: var(--link-color) !important;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+
+.section2_bottom > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section2_bottom > div > div{
+  height: 40px;
+  width: 40px;
+  border: 2px dotted var(--link-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.section2_bottom > div > p > span {
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+.section2_bottom > div > a {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--link-color);
+}
+
+/*====================================== SECTION 3 ======================================================*/
+.section3 > div{
+  display: flex;
+  align-items: center;
+}
+
+.discover_link > p > span:first-child{
+  transform: translateX(100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.1s ease-in-out;
+}
+
+.discover_link:hover > p {
+  background: var(--text-color);
+}
+
+.discover_link:hover > p > span:first-child{
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+  transition: all 0.3s ease-in-out;
+}
+
+
+/*====================================== MEDIA QUERIES ======================================================*/
+@media  (max-width: 1200px) {
+  /*===== SECTION2 MEDIA QUERY @1200px =======*/
+  .section2 div h1 {
+    font-size: 36px;
+    line-height: normal;
+  }
+
+  .section2 div p {
+    font-size: 1rem;
+  }
+
+  .section2_main_img > div > div > h1 {
+    font-size: 20px;
+  }
+}
+
+@media  (max-width: 770px) {
+  /*===== SECTION1 MEDIA QUERY =======*/
+  h1 {
+    font-size: 32px;
+    line-height: normal;
+  }
+
+  .home_section1 {
+    position: static;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background: rgb(13, 10, 26);
+  }
+
+  .home_context {
+    margin-top: 100px;
+    position: static;
+    padding: 0 25%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .home_context > div,
+  button {
+    font-size: 16px;
+  }
+
+  .banner_div {
+    position: static;
+    bottom: 0;
+    height: 50%;
+    display: block;
+    width: 100%;
+  }
+
+  .home_banner {
+    object-fit: contain;
+  }
+
+  
+  /*===== SECTION2 MEDIA QUERY =======*/
+  .section2 > div {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /*===== SECTION3 MEDIA QUERY =======*/
+  .section3 > div {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .discover_link > div:first-child {
+    padding: 40px;
+  }
+
+  .discover_link > p > span:first-child{
+    display: none;
+  }
+}
