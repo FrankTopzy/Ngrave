@@ -1,4 +1,4 @@
-import { createContext, useState, type Dispatch, type SetStateAction } from "react";
+import React, { createContext, useRef, useState, type Dispatch, type SetStateAction } from "react";
 import type { Product } from "./ProductCard/types";
 import { products } from "../Data/products";
 
@@ -10,8 +10,7 @@ interface ProductsContextType {
   cart: Cart[];
   setCart: Dispatch<SetStateAction<Cart[]>>;
   addToCart: (product: Product) => void;
-  sidebar: boolean;
-  setSidebar: Dispatch<SetStateAction<boolean>>;
+  sidebar: React.RefObject<HTMLDivElement | null>;
 }
 
 export const ProductsContext = createContext<ProductsContextType | null>(null);
@@ -22,7 +21,7 @@ type ProductsContextProps = {
 
 const ProductsContextProvider = ({children} : ProductsContextProps) => {
   const [cart, setCart] = useState<Cart[]>([]);
-  const [sidebar, setSidebar] = useState<boolean>(true);
+  const sidebar = useRef<HTMLDivElement | null>(null);
 
   function addToCart(product: Product): void {
 
@@ -43,7 +42,6 @@ const ProductsContextProvider = ({children} : ProductsContextProps) => {
     setCart,
     addToCart,
     sidebar,
-    setSidebar
   }
 
   return (

@@ -4,10 +4,10 @@ import { ProductsContext } from '../context';
 import { Link } from 'react-router-dom';
 
 function Sidebar() {
-  const { sidebar, setSidebar } = useContext(ProductsContext) ?? {};
+  const { sidebar } = useContext(ProductsContext) ?? {};
 
   return (
-    <div className={`${sidebar ? `${Styles.show_sidebar}` : `${Styles.sidebar}`} fixed w-[100%] bottom-0 top-0 right-[-100%] bg-[var(--background-color)] z-55`}>
+    <div className={`${Styles.sidebar} fixed w-[100%] bottom-0 top-0 right-[-200%] bg-[var(--background-color)] z-55`} ref={sidebar}>
       <div className={`${Styles.sidebar_div} h-full text-white`}>
         <div className=''>
           <ul className='text-[20px]'>
@@ -26,7 +26,7 @@ function Sidebar() {
         </div>
         
         <button className='absolute top-[20px] right-[20px]' onClick={() => {
-          setSidebar && setSidebar(false)
+          if (sidebar?.current) sidebar?.current.style.setProperty("right", "-200%");
         }}>
           <div className={`${Styles.nav_close}`}></div>
         </button>

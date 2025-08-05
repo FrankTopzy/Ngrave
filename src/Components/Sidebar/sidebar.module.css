@@ -1,12 +1,10 @@
 .sidebar {
   transition: all 0.5s ease-out;
-  display: none;
 }
 
 .show_sidebar {
   right: 0;
   transition: all 0.5s ease-in;
-
 }
 
 .sidebar_div {

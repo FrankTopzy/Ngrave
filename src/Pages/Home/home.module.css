@@ -163,13 +163,12 @@
 
   .home_context {
     margin-top: 100px;
-    position: static;
-    padding: 0 25%;
+    padding: 0 5%;
     width: 100%;
 
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
   }
 
   .home_context > div,
@@ -209,5 +208,12 @@
 
   .discover_link > p > span:first-child{
     display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .home_context {
+    padding: 0 3%;
+
   }
 }

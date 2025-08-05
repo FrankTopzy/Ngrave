@@ -6,7 +6,7 @@ import { ProductsContext } from '../context';
 import { useContext } from 'react';
 
 function Navbar() {
-  const { setSidebar } = useContext(ProductsContext) ?? {};
+  const { sidebar } = useContext(ProductsContext) ?? {};
 
   return (
     <div className='fixed z-50 w-full flex justify-center'>
@@ -31,7 +31,7 @@ function Navbar() {
           <Link to={'/shop'} className={`${Styles.btn}`}>Shop</Link>
 
           <button className='md:hidden p-1 border-0 rounded-[4px] bg-[#999EAB1A]' onClick={() => {
-            setSidebar && setSidebar(true)
+            if (sidebar?.current) sidebar?.current.style.setProperty("right", "0");
           }}>
             <img src={menuIcon} alt=""/>
           </button>
