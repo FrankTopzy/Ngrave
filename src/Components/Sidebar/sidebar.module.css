@@ -1,14 +1,17 @@
 .sidebar {
   transition: all 0.5s ease-out;
+  display: none;
 }
 
 .show_sidebar {
   right: 0;
   transition: all 0.5s ease-in;
+
 }
 
 .sidebar_div {
   padding: 96px 32px 48px;
+   overflow-y: scroll;
 }
 
 .sidebar_div > div > ul > li {
@@ -46,4 +49,11 @@
 
   position: absolute;
   bottom: -8px;
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    display: block;
+    z-index: 100;
+  }
 }

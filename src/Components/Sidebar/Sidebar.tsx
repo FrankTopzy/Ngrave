@@ -8,7 +8,7 @@ function Sidebar() {
 
   return (
     <div className={`${sidebar ? `${Styles.show_sidebar}` : `${Styles.sidebar}`} fixed w-[100%] bottom-0 top-0 right-[-100%] bg-[var(--background-color)] z-55`}>
-      <div className={`${Styles.sidebar_div} relative text-white`}>
+      <div className={`${Styles.sidebar_div} h-full text-white`}>
         <div className=''>
           <ul className='text-[20px]'>
             <li>Products</li>
