@@ -7,7 +7,7 @@ import { ProductsContext } from '../context';
 function ProductCard() {
   const [items, setItems] = useState<Product[]>([]);
 
-  const { addToCart, cart } = useContext(ProductsContext) ?? {};
+  const { addToCart, cart, cartbar } = useContext(ProductsContext) ?? {};
 
   useEffect(() => {
     setItems(products); //imported products are now items
@@ -33,7 +33,9 @@ function ProductCard() {
                 <p className='mb-[15px]'>{(item.price).toFixed(2)} EUR</p>
               </div>
 
-              <button className={`${Styles.add_btn}`} onClick={() => addToCart && addToCart(item)}>Add To Cart</button>
+              <button className={`${Styles.add_btn}`} onClick={() => {
+                addToCart && addToCart(item);
+                if (cartbar?.current) cartbar?.current.style.setProperty("right", "0");}}>Add To Cart</button>
             </div>
           )
         })

@@ -1,0 +1,6 @@
+.cart_container {
+  position: fixed;
+  background: rgba(70, 70, 70, 0.384);
+  right: -100%;
+  z-index: 200;
+}

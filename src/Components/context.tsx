@@ -11,6 +11,7 @@ interface ProductsContextType {
   setCart: Dispatch<SetStateAction<Cart[]>>;
   addToCart: (product: Product) => void;
   sidebar: React.RefObject<HTMLDivElement | null>;
+  cartbar: React.RefObject<HTMLDivElement | null>;
 }
 
 export const ProductsContext = createContext<ProductsContextType | null>(null);
@@ -22,6 +23,7 @@ type ProductsContextProps = {
 const ProductsContextProvider = ({children} : ProductsContextProps) => {
   const [cart, setCart] = useState<Cart[]>([]);
   const sidebar = useRef<HTMLDivElement | null>(null);
+  const cartbar = useRef<HTMLDivElement | null>(null);
 
   function addToCart(product: Product): void {
 
@@ -42,6 +44,7 @@ const ProductsContextProvider = ({children} : ProductsContextProps) => {
     setCart,
     addToCart,
     sidebar,
+    cartbar
   }
 
   return (

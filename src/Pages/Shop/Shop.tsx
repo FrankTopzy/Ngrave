@@ -1,10 +1,12 @@
 import ProductCard from '../../Components/ProductCard/ProductCard';
 import Styles from './shop.module.css';
 import navLogo from '../../assets/ngrave/ngrave_store_logo.webp'
+import Cart from '../../Components/Cart/Cart';
 
 function Shop() {
   return (
     <div className={`${Styles.store} text-[#000]`}>
+      <Cart/>
       <div className='w-full bg-amber-500 py-3 text-center text-[18px] capitalize'>
         Free Shipping On wallet Orders
       </div>

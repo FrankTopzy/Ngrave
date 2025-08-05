@@ -59,8 +59,8 @@ function Home() {
         </div>
 
         <div className={`${Styles.section2_main_img} w-full gap-4 mb-[100px]`}>
-          <div className='bg-[var(--text-color)]'>
-            <div className='mx-[48px] flex-1'>
+          <div className='bg-[var(--text-color)] sm:p-[40px] p-[20px]'>
+            <div className='flex-1'>
               <h1 className=''>
                 The Coldest Wallet <br/>
                 <span className='text-[var(--background-color)]'>NGRAVE ZERO</span>
@@ -81,8 +81,8 @@ function Home() {
             </div>
           </div>
 
-          <div className='bg-[#131920]'>
-            <div className='mx-[48px]'>
+          <div className='bg-[#131920] sm:p-[40px] p-[20px]'>
+            <div className=''>
               <h1>
                 The Ultimate Backup <br/>
                 <span className='text-[var(--text-color)]'>NGRAVE GRAPHENE</span>
