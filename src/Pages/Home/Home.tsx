@@ -1,5 +1,8 @@
 import Styles from './home.module.css';
 import bg1 from '../../assets/ngrave/ngrave-bg6b.webp';
+import ngravelogo from '../../assets/ngrave/logo2.webp';
+import ledgerlogo from '../../assets/ngrave/ledger-logo.webp';
+import trezorlogo from '../../assets/ngrave/trezor-logo.webp'
 import subBg1 from '../../assets/ngrave/ngrave-sub12.webp';
 import subBg2 from '../../assets/ngrave/ngrave-sub13.webp';
 import subBg3 from '../../assets/ngrave/ngrave-sub1.webp';
@@ -7,19 +10,21 @@ import bunny from '../../assets/ngrave/bunny.svg';
 import metamask from '../../assets/ngrave/fox.svg';
 import { Link } from 'react-router-dom';
 import Navbar from '../../Components/Navbar/Navbar';
+import Sidebar from '../../Components/Sidebar/Sidebar';
 
 // HOME PAGE / LANDING PAGE //
 function Home() {
   return (
     <div className='relative'>
       <Navbar/>
+      <Sidebar/>
       {/*=============================SECTION 1========================================*/}
       <section className={`${Styles.home_section1}`} id='section1'>
         <div className='max-w-[1400px] mx-auto grid'>
-          <div className={`${Styles.home_context} w-full`}>
+          <div className={`${Styles.home_context} ${Styles.slide_in} w-full`}>
             <h1 className='text-6xl font-bold leading-tight'>The <span className={`${Styles.span_text}`}>Most Secure</span> Wallet Ever Built</h1>
 
-            <div className='flex flex-col gap-3'>
+            <div className={`flex flex-col gap-3`}>
               <p className='text-[var(--grey-text)] text-[1.3rem]'>World's most secure air-gapped wallet with biometrics and EAL7 security, and its recoverable stainless steel backup.</p>
 
               <div className='text-[1.2rem] font-bold flex gap-2 items-center'>
@@ -47,7 +52,7 @@ function Home() {
       </section>
 
       {/*======================================== SECTION 2 =============================================*/}
-      <section className={`${Styles.section2} pt-[100px]`}>
+      <section className={`${Styles.section2} ${Styles.slide_in_top} pt-[100px]`}>
         <div className='items-center mb-[40px]'>
           <h1 className='text-[56px] font-bold flex flex-col w-full leading-[60px]'>
             <span className='text-[var(--grey-text)] font-light'>Most secure combo</span> 
@@ -105,6 +110,10 @@ function Home() {
           </div>
         </div>
 
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/14HIIUjOLGY?si=o9m4fNzwn2S_ng2t" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen
+        
+        className='w-full h-[1000px] border-none rounded-3xl mb-[70px] outline-none'></iframe>
+
         <div className={`${Styles.section2_bottom} text-[var(--grey-text)] text-[18px] gap-5`}>
           <div>
             <div>01</div>
@@ -151,7 +160,7 @@ function Home() {
       </section>
 
       {/*======================================== SECTION 3 =============================================*/}
-      <section className={`${Styles.section3} pt-[160px]`}>
+      <section className={`${Styles.section3} ${Styles.slide_in_top} pt-[160px] pb-[40px]`}>
         <div className='items-center mb-[40px]'>
           <h1 className='text-[56px] font-bold flex flex-col w-full leading-[60px]'>
             <span className='text-[var(--grey-text)] font-light'>Handle your crypto</span> 
@@ -180,7 +189,73 @@ function Home() {
         </div>
       </section>
 
-      <a href='#section1' className='fixed right-[50px] bottom-[50px] bg-[var(--link-color)]'>
+      {/*======================================== SECTION 4 =============================================*/}
+      <section className={`${Styles.section4} bg-[var(--primary-color)] py-[60px] text-black`}>
+        <p className='text-gray-500'>The Coldest Wallet</p>
+        <p className='font-bold text-black'>That Goes Further</p>
+
+        <div className={`${Styles.section4_table} flex justify-center my-[40px]`}>
+          <table>
+            <thead>
+              <tr>
+                <td></td>
+                <td className='border-t-1 border-[#00CC99] border-dashed rounded-tl-2xl rounded-tr-2xl'>
+                  <div>
+                    <img src={ngravelogo} alt="" />
+                    <p className='text-center mt-[30px] uppercase'>Zero</p>
+                  </div>
+                </td>
+
+                <td>
+                  <div>
+                    <img src={ledgerlogo} alt="" />
+                    <p className='text-center mt-[30px] uppercase'>Flex</p>
+                  </div>
+                </td>
+
+                <td>
+                  <div>
+                    <img src={trezorlogo} alt="" />
+                    <p className='text-center mt-[20px] uppercase'>Safe5</p>
+                  </div>
+                </td>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>EAL Level</td>
+                <td>EAL7 - Highest Certification Level</td>
+                <td>EAL6+</td>
+                <td>EAL6+</td>
+              </tr>
+
+              <tr>
+                <td>Offline Capability</td>
+                <td>Fully air-gapped (no USB, Bluetooth or Wi-Fi)</td>
+                <td>Requires USB/Bluetooth. Not air-gapped</td>
+                <td>Requires USB/Bluetooth. Not air-gapped</td>
+              </tr>
+
+              <tr>
+                <td>Backup Method</td>
+                <td>GRAPHENE steel plate + Perfect Key recovery</td>
+                <td>24-word seed + optional steel backup</td>
+                <td>24-word seed, microSD (Safe 5), SLIP39 optional</td>
+              </tr>
+
+              <tr>
+                <td>Coin Support</td>
+                <td className='border-b-1 border-[#00CC99] border-dashed rounded-b-2xl'>5 blockchains and ALL ERC-20 and ESDT Tokens</td>
+                <td>5,500+ coins</td>
+                <td>9000+ coins and tokens supported</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <a href='#section1' className='fixed right-[50px] bottom-[50px]  bg-[var(--link-color)]'>
         up
       </a>
     </div>

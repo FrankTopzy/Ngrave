@@ -17,7 +17,7 @@ function Shop() {
       </div>
 
       <div className='sticky top-0 z-50'>
-        <header className='bg-white w-full py-7 px-[20%] flex text-[14px] uppercase font-light text-[grey]'>
+        <header className='bg-white w-full py-7 px-[20%] sm:px-[5%] sm:block sm:flex hidden text-[14px] uppercase font-light text-[grey]'>
           <div className="logo">
             <img src={navLogo} alt="" width='200px'/>
           </div>
