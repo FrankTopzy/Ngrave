@@ -7,15 +7,11 @@ import { ProductsContext } from '../context';
 function ProductCard() {
   const [items, setItems] = useState<Product[]>([]);
 
-  const { addToCart, cart, cartbar } = useContext(ProductsContext) ?? {};
+  const { addToCart, cartbar } = useContext(ProductsContext) ?? {};
 
   useEffect(() => {
     setItems(products); //imported products are now items
   }, [])
-
-  useEffect(() => {
-    console.log(cart);
-  }, [cart])
 
   
   return (

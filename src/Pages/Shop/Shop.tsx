@@ -2,8 +2,12 @@ import ProductCard from '../../Components/ProductCard/ProductCard';
 import Styles from './shop.module.css';
 import navLogo from '../../assets/ngrave/ngrave_store_logo.webp'
 import Cart from '../../Components/Cart/Cart';
+import { useContext } from 'react';
+import { ProductsContext } from '../../Components/context';
 
 function Shop() {
+  const { cartbar } = useContext(ProductsContext) ?? {};
+
   return (
     <div className={`${Styles.store} text-[#000]`}>
       <Cart/>
