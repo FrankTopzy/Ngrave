@@ -3,6 +3,7 @@ import Styles from './sidebar.module.css';
 import { ProductsContext } from '../context';
 import { Link } from 'react-router-dom';
 
+// HOME'S RESPONSIVE SIDEBAR //
 function Sidebar() {
   const { sidebar } = useContext(ProductsContext) ?? {};
 

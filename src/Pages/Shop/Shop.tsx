@@ -5,6 +5,7 @@ import Cart from '../../Components/Cart/Cart';
 import { useContext } from 'react';
 import { ProductsContext } from '../../Components/context';
 
+// NGRAVE SHOP PAGE //
 function Shop() {
   const { cartbar } = useContext(ProductsContext) ?? {};
 

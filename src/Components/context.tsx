@@ -2,11 +2,11 @@ import React, { createContext, useRef, useState, type Dispatch, type SetStateAct
 import type { Product } from "./ProductCard/types";
 import { products } from "../Data/products";
 
-interface Cart extends Product { ////////// This is the cart type birthed from the Product type ////////////
+interface Cart extends Product { // THIS IS THE CART TYPE ORCHESTRATED FROM THE PRODUCT TYPE //
   count: number;
 }
 
-interface ProductsContextType { ////////// This is the context type ////////////
+interface ProductsContextType { // THIS IS THE PROP.CHILDREN TYPE //
   cart: Cart[];
   setCart: Dispatch<SetStateAction<Cart[]>>;
   addToCart: (product: Product) => void;
@@ -17,11 +17,11 @@ interface ProductsContextType { ////////// This is the context type ////////////
 
 export const ProductsContext = createContext<ProductsContextType | null>(null);
 
-type ProductsContextProps = { ////////// This is the props.children type ////////////
+type ProductsContextProps = { // THIS IS THE CONTEXT TYPE //
   children: React.ReactNode;
 }
 
-const ProductsContextProvider = ({children} : ProductsContextProps) => { ////////// Main Context
+const ProductsContextProvider = ({children} : ProductsContextProps) => { // MAIN CONTEXT //
   const [cart, setCart] = useState<Cart[]>([]);
   const sidebar = useRef<HTMLDivElement | null>(null);
   const cartbar = useRef<HTMLDivElement | null>(null);

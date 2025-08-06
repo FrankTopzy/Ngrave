@@ -1,14 +1,16 @@
 import Styles from './cart.module.css';
 //import item1 from '../../assets/shopItems/COMBO-1.webp'
-import delIcon from '../../assets/icons/del_icon.png'
+import delIcon from '../../assets/icons/del_icon.png';
 import { useContext, useEffect, useRef } from 'react';
 import { ProductsContext } from '../context';
 
+// SHOP CART //
 function Cart() {
   const { cart, cartbar, setCart, removeFromCart } = useContext(ProductsContext) ?? {};
   const subCartCon = useRef<HTMLDivElement>(null);
   let total = 0;
 
+  // This function helps in increment and decrement of cart counts //
   function countAction(action: string, id: number) {
     if (!setCart) return;
 
@@ -25,6 +27,7 @@ function Cart() {
     }))
   }
 
+  // Cart Eventhandler //
   useEffect(() => {
     const handler = (e: MouseEvent) => {
       //const parentDiv = (e.target as HTMLElement).closest('div');
@@ -55,12 +58,13 @@ function Cart() {
         <hr className='border-none w-full h-[1px] bg-[#b6b6b6]'/>
 
         <div className='h-[85%]'>
-          {cart?.length === 0 && (<div className='text-center mt-4 text-2xl text-gray-400'>Cart is Empty!</div>)}
+          {cart?.length === 0 && (<div className='text-center mt-4 text-2xl text-gray-400'>Cart is Empty!</div>) /* Empty cart container */}
+
           {cart?.map((cartItem) => {
             total += cartItem.price * cartItem.count;
 
             return (
-              <div className='flex gap-[20px] mt-[10px] justify-between' key={cartItem.id}>
+              <div className='flex gap-[20px] mt-[10px] justify-between' key={cartItem.id}> 
                 <div>
                   <img src={cartItem.imagePath} alt="" width='100'/>
                 </div>

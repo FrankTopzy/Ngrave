@@ -8,6 +8,7 @@ import metamask from '../../assets/ngrave/fox.svg';
 import { Link } from 'react-router-dom';
 import Navbar from '../../Components/Navbar/Navbar';
 
+// HOME PAGE / LANDING PAGE //
 function Home() {
   return (
     <div className='relative'>

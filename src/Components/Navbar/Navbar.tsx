@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { ProductsContext } from '../context';
 import { useContext } from 'react';
 
+// HOME NAVBAR //
 function Navbar() {
   const { sidebar } = useContext(ProductsContext) ?? {};
 

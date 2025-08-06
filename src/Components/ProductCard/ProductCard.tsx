@@ -4,6 +4,7 @@ import type { Product } from './types';
 import Styles from './productcard.module.css'
 import { ProductsContext } from '../context';
 
+// ITEM CARD CONTAINER//
 function ProductCard() {
   const [items, setItems] = useState<Product[]>([]);
 
