@@ -6,6 +6,12 @@ import trezorlogo from '../../assets/ngrave/trezor-logo.webp'
 import subBg1 from '../../assets/ngrave/ngrave-sub12.webp';
 import subBg2 from '../../assets/ngrave/ngrave-sub13.webp';
 import subBg3 from '../../assets/ngrave/ngrave-sub1.webp';
+import subBg4 from '../../assets/ngrave/ngrave-sub2.webp';
+import subBg5 from '../../assets/ngrave/ngrave-sub15.webp';
+import subBg6 from '../../assets/ngrave/ngrave-sub16.webp';
+import subBg7 from '../../assets/ngrave/ngrave-sub3.webp';
+import subBg8 from '../../assets/ngrave/ngrave-sub18.webp';
+import subBg9 from '../../assets/ngrave/ngrave-sub17.webp';
 import bunny from '../../assets/ngrave/bunny.svg';
 import metamask from '../../assets/ngrave/fox.svg';
 import { Link } from 'react-router-dom';
@@ -110,9 +116,9 @@ function Home() {
           </div>
         </div>
 
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/14HIIUjOLGY?si=o9m4fNzwn2S_ng2t" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen
+        <iframe width="560" height="800" src="https://www.youtube.com/embed/14HIIUjOLGY?si=o9m4fNzwn2S_ng2t" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen
         
-        className='w-full h-[1000px] border-none rounded-3xl mb-[70px] outline-none'></iframe>
+        className='w-full border-none rounded-3xl mb-[70px] outline-none'></iframe>
 
         <div className={`${Styles.section2_bottom} text-[var(--grey-text)] text-[18px] gap-5`}>
           <div>
@@ -172,7 +178,7 @@ function Home() {
           </p>
         </div>
         
-        <div className={`${Styles.discover_link} bg-[#0f1113] border-0 rounded-2xl h-[700px] relative overflow-hidden`}>
+        <div className={`${Styles.discover_link} flex bg-[#0f1113] border-0 mb-[50px] rounded-2xl h-[700px] relative overflow-hidden`}>
           <div className='pl-[111px] basis-[40%]'>
             <h1 className='text-5xl font-bold mb-5'>Tap and swipe. Just like a phone.</h1>
             <p>With a 4” ultra-clear touch screen, your crypto is at your fingertips. If you can use a phone, you can use NGRAVE ZERO.</p>
@@ -182,10 +188,97 @@ function Home() {
             <img src={subBg3} alt="" className='object-contain w-full'/>
           </div>
 
-          <p className={`absolute bottom-2 right-2 flex justify-between items-center text-[var(--link-color)] border-none rounded-[40px] overflow-hidden`}>
+          <p className={`${Styles.discover_link_link} absolute bottom-2 right-2 flex justify-between items-center text-[var(--link-color)] border-none rounded-[40px] overflow-hidden`}>
             <span className=' py-1 pl-3'>Discover ZERO</span>
             <span className="material-icons bg-[var(--text-color)] border-0 rounded-4xl py-2 px-2">arrow_forward_ios</span>
           </p>
+        </div>
+
+        <div className={`${Styles.section3_grid} grid grid-cols-[repeat(auto-fill,minmax(450px,1fr))] gap-[1rem] text-[var(--text-color)]`}>
+
+          <div className={`${Styles.discover_link} relative bg-sky-700 border-none rounded-2xl overflow-hidden`}>
+            <div className='border-none rounded-2xl p-10'>
+              <h3 className='text-[30px] font-semibold'>100% offline transactions</h3>
+              <p className='text-[19px] mt-5'>No USB, no WIFI, no Bluetooth, no NFC. Transactions are signed via QR codes. Your keys remain offline. It is fast and secure.</p>
+            </div>
+          
+            <img src={subBg4} alt="" className='object-contain  w-full'/>
+
+            <p className={`${Styles.discover_link_link} absolute bottom-2 right-2 flex justify-between items-center text-[var(--link-color)] border-none rounded-[40px] overflow-hidden`}>
+              <span className=' py-1 pl-3'>Video</span>
+              <span className="material-icons bg-black border-0 rounded-4xl py-2 px-2">add_2</span>
+            </p>
+          </div>
+
+          <div className={`${Styles.discover_link} relative bg-white border-none rounded-2xl text-black overflow-hidden`}>
+            <div className='border-none rounded-2xl p-10'>
+              <h3 className='text-[30px] font-semibold'>World-leading security</h3>
+              <p className='text-[19px] mt-5'>NGRAVE has achieved the highest security certification of any financial product. We built tamper-proof technology, biometric 2-factor authentication, and much more.</p>
+            </div>
+          
+            <img src={subBg5} alt="" className='object-contain  w-full'/>
+
+            <p className={`${Styles.discover_link_link} absolute bottom-2 right-2 flex justify-between items-center text-[var(--link-color)] border-none rounded-[40px] overflow-hidden`}>
+              <span className=' py-1 pl-3'>Learn more about security</span>
+              <span className="material-icons bg-black border-0 rounded-4xl py-2 px-2">arrow_forward_ios</span>
+            </p>
+          </div>
+
+          <div className={`${Styles.discover_link} ${Styles.discover_link_others} relative bg-[#0d0d16] border-none rounded-2xl text-white overflow-hidden`}>
+            <div className='border-none rounded-2xl p-10'>
+              <h3 className='text-[30px] font-semibold'>100% offline transactions</h3>
+              <p className='text-[16px] mt-5'>No USB, no WIFI, no Bluetooth, no NFC. Transactions are signed via QR codes. Your keys remain offline. It is fast and secure.</p>
+            </div>
+          
+            <img src={subBg6} alt="" className='object-contain  w-full'/>
+
+            <p className={`${Styles.discover_link_link} absolute bottom-2 right-2 flex justify-between items-center text-[var(--link-color)] border-none rounded-[40px] overflow-hidden`}>
+              <span className=' py-1 pl-3'>Discover GRAPHENE recovery</span>
+              <span className="material-icons bg-white border-0 rounded-4xl py-2 px-2">arrow_forward_ios</span>
+            </p>
+          </div>
+
+          <div className={`${Styles.discover_link} ${Styles.discover_link_others} relative bg-[#0d0d16] border-none rounded-2xl text-white overflow-hidden`}>
+            <div className='border-none rounded-2xl p-10'>
+              <h3 className='text-[30px] font-semibold'>100% offline transactions</h3>
+              <p className='text-[16px] mt-5'>No USB, no WIFI, no Bluetooth, no NFC. Transactions are signed via QR codes. Your keys remain offline. It is fast and secure.</p>
+            </div>
+          
+            <img src={subBg7} alt="" className='object-contain  w-full'/>
+
+            <p className={`${Styles.discover_link_link} absolute bottom-2 right-2 flex justify-between items-center text-[var(--link-color)] border-none rounded-[40px] overflow-hidden`}>
+              <span className=' py-1 pl-3'>Discover GRAPHENE recovery</span>
+              <span className="material-icons bg-white border-0 rounded-4xl py-2 px-2">arrow_forward_ios</span>
+            </p>
+          </div>
+
+          <div className={`${Styles.discover_link} ${Styles.discover_link_others} relative bg-[#0d0d16] border-none rounded-2xl text-white overflow-hidden`}>
+            <div className='border-none rounded-2xl p-10'>
+              <h3 className='text-[30px] font-semibold'>100% offline transactions</h3>
+              <p className='text-[16px] mt-5'>No USB, no WIFI, no Bluetooth, no NFC. Transactions are signed via QR codes. Your keys remain offline. It is fast and secure.</p>
+            </div>
+          
+            <img src={subBg8} alt="" className='object-contain  w-full'/>
+
+            <p className={`${Styles.discover_link_link} absolute bottom-2 right-2 flex justify-between items-center text-[var(--link-color)] border-none rounded-[40px] overflow-hidden`}>
+              <span className=' py-1 pl-3'>Contact Us</span>
+              <span className="material-icons bg-white border-0 rounded-4xl py-2 px-2">arrow_forward_ios</span>
+            </p>
+          </div>
+
+          <div className={`${Styles.discover_link} ${Styles.discover_link_others} relative bg-[#0d0d16] border-none rounded-2xl text-white overflow-hidden`}>
+            <div className='border-none rounded-2xl p-10'>
+              <h3 className='text-[30px] font-semibold'>100% offline transactions</h3>
+              <p className='text-[16px] mt-5'>No USB, no WIFI, no Bluetooth, no NFC. Transactions are signed via QR codes. Your keys remain offline. It is fast and secure.</p>
+            </div>
+          
+            <img src={subBg9} alt="" className='object-contain  w-full'/>
+
+            <p className={`${Styles.discover_link_link} absolute bottom-2 right-2 flex justify-between items-center text-[var(--link-color)] border-none rounded-[40px] overflow-hidden`}>
+              <span className=' py-1 pl-3'>Discover LIQUID</span>
+              <span className="material-icons bg-white border-0 rounded-4xl py-2 px-2">arrow_forward_ios</span>
+            </p>
+          </div>
         </div>
       </section>
 

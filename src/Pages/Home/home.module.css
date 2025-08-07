@@ -100,7 +100,6 @@
 
 /*====================================== SECTION 3 ======================================================*/
 .section3 > div{
-  display: flex;
   align-items: center;
 }
 
@@ -112,14 +111,22 @@
 }
 
 .discover_link:hover > p {
-  background: var(--text-color);
+  background: black;
 }
 
-.discover_link:hover > p > span:first-child{
+.discover_link_others:hover > p {
+  background: white;
+}
+
+.discover_link:hover .discover_link_link  > span:first-child{
   opacity: 1;
   visibility: visible;
   transform: translateX(0);
   transition: all 0.3s ease-in-out;
+}
+
+.section3_grid > div {
+  max-height: 750px;
 }
 
 /*====================================== SECTION 4 ======================================================*/
