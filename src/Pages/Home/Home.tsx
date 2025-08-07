@@ -18,13 +18,27 @@ import metamask from '../../assets/ngrave/fox.svg';
 import { Link } from 'react-router-dom';
 import Navbar from '../../Components/Navbar/Navbar';
 import Sidebar from '../../Components/Sidebar/Sidebar';
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 
 // HOME PAGE / LANDING PAGE //
 function Home() {
-  //scroll by dragging
   const gridContainer = useRef<HTMLDivElement>(null);
 
+  /*const gridRect: DOMRect | undefined = gridContainer.current?.getBoundingClientRect();
+  //console.log(gridRect?.left);
+
+  useEffect(() => {
+    if (gridContainer.current) {
+      const bodyRect = document.body.getBoundingClientRect();
+      const containerRect = gridContainer.current.getBoundingClientRect();
+      const distanceToBodyLeft = containerRect.left - bodyRect.left;
+      console.log(distanceToBodyLeft);
+    }
+  }, [gridContainer.current?.offsetLeft]); */
+
+   
+
+  //scroll by dragging
   let isDown = false;
   let startX: number;
   let scrollLeft: number;
@@ -33,7 +47,11 @@ function Home() {
     isDown = true;
 
     if (gridContainer.current) {
+      //console.log(e.pageX);
+      
       startX = e.pageX - gridContainer.current.offsetLeft;
+      //console.log(startX);
+      
       scrollLeft = gridContainer.current.scrollLeft;
       gridContainer.current.style.cursor = 'grabbing';
     }
@@ -41,6 +59,7 @@ function Home() {
 
   gridContainer?.current?.addEventListener('mousemove', (e) => {
     if (!isDown) return;
+    
     e.preventDefault();
 
     if (gridContainer.current) {
@@ -50,7 +69,7 @@ function Home() {
     }
   });
 
-  gridContainer?.current?.addEventListener('mousemove', (e) => {
+  gridContainer?.current?.addEventListener('mousemove', () => {
     isDown = false;
 
     if (gridContainer.current) {
@@ -62,9 +81,17 @@ function Home() {
     isDown = false;
 
     if (gridContainer.current) gridContainer.current.style.cursor = 'grab';
-  });
+  }); // end of scroll by dragging.
 
+  //scroll by clicking
 
+  function slideLeft(action: string): void {
+    if(gridContainer.current && action === "slideLeft") {
+      gridContainer.current.scrollLeft -= 400;
+    } else if (gridContainer.current && action === "slideRight") {
+      gridContainer.current.scrollLeft += 400;
+    }
+  }
 
 
   return (
@@ -341,13 +368,13 @@ function Home() {
         </div>
 
         <div className='mx-[15%] justify-end items-center flex gap-3 mb-[40px]'>
-          <div className="material-icons bg-gray-600 p-2 rounded-4xl">
+          <button className={`material-icons bg-gray-600 hover:bg-white hover:text-black transition-all duration-150 p-2 rounded-4xl`} onClick={() => slideLeft("slideLeft")}>
             <span className="material-icons">arrow_back_ios</span>
-          </div>
+          </button>
 
-          <div className="material-icons bg-gray-600 border-0 rounded-4xl p-2">
+          <button className="material-icons bg-gray-600 border-0 rounded-4xl p-2 hover:bg-white hover:text-black transition-all duration-150" onClick={() => slideLeft("slideRight")}>
             <span className="material-icons">arrow_forward_ios</span>
-          </div>
+          </button>
         </div>
 
         <div>
