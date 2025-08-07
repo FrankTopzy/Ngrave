@@ -128,7 +128,6 @@
 .section3_grid > div {
   max-height: 750px;
 }
-
 /*====================================== SECTION 4 ======================================================*/
 .section4 > p{
   font-size: 52px;
@@ -170,7 +169,7 @@
   }
 }
 
-@media (max-width: 980px) {
+@media (max-width: 1024px) {
   section {
     width: 100%;
     min-height: 100vh;
@@ -284,6 +283,7 @@
   }
 }
 
+/*ANIMATIONS*/
 @media (prefers-reduced-motion: no-preference) {
   .slide_in {
     animation: slideIn 1s linear 1 both;

@@ -356,8 +356,8 @@ function Home() {
         </div>
       </section>
 
-      <div className='mb-[100px]'>
-        <div className='flex justify-between items-center px-[15%]'>
+      <div className={`${Styles.section3_slideDiv} ${Styles.slide_in_top} mb-[100px]`}>
+        <div className='flex flex-col md:flex-row justify-between gap-[15px] md:gap-[100px] md:items-center px-[5%] lg:px-[15%]'>
           <h1 className='text-[52px] text-gray-600 flex flex-col leading-[60px]'>
             Trusted <span className='text-white font-bold'>worldwide</span>
           </h1>
@@ -380,7 +380,7 @@ function Home() {
         <div>
           <div className='overflow-x-scroll [scrollbar-width:none] [scroll-behavior:smooth]' ref={gridContainer}>
             <div className='min-w-[3500px]'>
-              <div className='w-[400px] bg-[#0d0d16] p-8 border-none rounded-4xl inline-block ml-[270px] mr-7 cursor-grab select-none'>
+              <div className='w-[400px] bg-[#0d0d16] p-8 border-none rounded-4xl inline-block ml-[50px] lg:ml-[270px] mr-7 cursor-grab select-none'>
                 <div className='flex items-center justify-center rounded-2xl border-[var(--link-color)] w-[50px] h-[50px] border-2 border-dashed mb-4'>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6 17H9L11 13V7H5V13H8L6 17ZM14 17H17L19 13V7H13V13H16L14 17Z" fill="#3197FF"></path>
@@ -490,7 +490,7 @@ function Home() {
       </div>
 
       {/*======================================== SECTION 4 =============================================*/}
-      <section className={`${Styles.section4} bg-[var(--primary-color)] py-[60px] text-black`}>
+      <section className={`${Styles.section4} ${Styles.slide_in_top} bg-[var(--primary-color)] py-[60px] text-black`}>
         <p className='text-gray-500'>The Coldest Wallet</p>
         <p className='font-bold text-black'>That Goes Further</p>
 
