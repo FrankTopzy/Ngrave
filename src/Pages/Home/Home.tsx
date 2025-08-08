@@ -310,7 +310,6 @@ function Home() {
       </section>
 
       {/*======================================== SECTION 4 =============================================*/}
-      
       <section className={`${Styles.section4} ${Styles.slide_in_top} pt-[160px] pb-[40px]`}>
         <div className='items-center mb-[40px]'>
           <h1 className='text-[56px] font-bold flex flex-col w-full leading-[60px]'>
@@ -571,47 +570,64 @@ function Home() {
           <img src={bg1} alt="" className='w-full h-[800px]'/>
         </div>
 
-        <div className='flex justify-between gap-4'>
-          <div className='flex flex-col h-[700px] rounded-3xl bg-[#f0f0f0]'>
+        <div className='flex md:flex-row flex-col justify-between gap-4'>
+          <div className={`${Styles.discover_link} relative flex flex-col h-[800px] rounded-3xl bg-[#f0f0f0]`}>
             <img src={subBg10} alt="" />
 
             <h2 className='text-[2rem] text-black leading-10 flex flex-col font-semibold px-[40px]'>
               World's highest security-certified
               <span className='text-gray-500'>financial product</span>
             </h2>
+
+            <p className={`${Styles.discover_link_link} absolute bottom-2 right-2 flex justify-between items-center text-[var(--text-color)] border-none rounded-[40px] overflow-hidden`}>
+              <span className=' py-1 pl-3'>Discover ZERO</span>
+              <span className="material-icons bg-[var(--background-color)] border-0 rounded-4xl py-2 px-2">arrow_forward_ios</span>
+            </p>
           </div>
 
-          <div className='flex flex-col rounded-3xl bg-[#f0f0f0] h-[700px] '>
+          <div className={`${Styles.discover_link} relative flex flex-col h-[800px] rounded-3xl bg-[#f0f0f0]`}>
             <h2 className='flex-1 text-[2rem] text-black leading-10 flex flex-col font-semibold px-[40px] pt-[50px]'>
               House-fire resistant backup.
               <span className='text-gray-500'> High quality stainless steel.</span>
             </h2>
 
             <img src={subBg11} alt="subBg11" />
+
+            <p className={`${Styles.discover_link_link} absolute bottom-2 right-2 flex justify-between items-center text-[var(--text-color)] border-none rounded-[40px] overflow-hidden`}>
+              <span className=' py-1 pl-3'>Discover ZERO</span>
+              <span className="material-icons bg-[var(--background-color)] border-0 rounded-4xl py-2 px-2">arrow_forward_ios</span>
+            </p>
           </div>
 
-          <div className='flex flex-col h-[700px] rounded-3xl bg-[#f0f0f0]'>
+          <div className={`${Styles.discover_link} relative flex flex-col h-[800px] rounded-3xl bg-[#f0f0f0]`}>
             <img src={subBg12} alt="subBg12" />
 
             <h2 className='text-[2rem] text-black leading-10 flex flex-col font-semibold px-[40px]'>
               4-layer tamper resistance,
               <span className='text-gray-500'>starting with its metal casing.</span>
             </h2>
+
+            <p className={`${Styles.discover_link_link} absolute bottom-2 right-2 flex justify-between items-center text-[var(--text-color)] border-none rounded-[40px] overflow-hidden`}>
+              <span className=' py-1 pl-3'>Discover ZERO</span>
+              <span className="material-icons bg-[var(--background-color)] border-0 rounded-4xl py-2 px-2">arrow_forward_ios</span>
+            </p>
           </div>
         </div>
 
         <div className='rounded-4xl bg-[#f0f0f0] flex flex-col mt-[70px]'>
-          <div className='flex items-center justify-between mt-[70px]'>
-            <div className='px-[90px]'>
+          <div className='flex flex-col md:flex-row items-center justify-between mt-[70px]'>
+            <div className='lg:pl-[90px] pl-[40px]'>
               <p className='flex flex-col text-[2rem] text-gray-500] w-[350px] leading-[57px]'>
                 NGRAVE store
-                <span className='font-bold text-[52px]'>Start truly owning your crypto</span>
+                <span className='font-bold text-[40px] md:text-[52px]'>Start truly owning your crypto</span>
               </p>
 
               <button className='bg-[var(--span-text-color)] py-1.5 px-5 mt-5 rounded-[7px]'>Buy Now</button>
             </div>
 
-            <img src={subBg13} alt="" />
+            <div className='flex-1'>
+              <img src={subBg13} alt="" className='w-full object-contain'/>
+            </div>
           </div>
 
           <div className='p-10'>
