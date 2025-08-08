@@ -1,6 +1,7 @@
 import Styles from './home.module.css';
 import bg1 from '../../assets/ngrave/ngrave-bg6b.webp';
-import bg2 from '../../assets/ngrave/ngrave-bg7.webp';
+import cryptoAnim1 from '../../assets/ngrave/crypto/test-cryptosupport-may-3.svg';
+import cryptoAnim2 from '../../assets/ngrave/crypto/test-cryptosupport-may-4.svg';
 import ngravelogo from '../../assets/ngrave/logo2.webp';
 import ledgerlogo from '../../assets/ngrave/ledger-logo.webp';
 import trezorlogo from '../../assets/ngrave/trezor-logo.webp'
@@ -69,7 +70,7 @@ function Home() {
 
     if (gridContainer.current) {
       const x: number = e.pageX - gridContainer.current.offsetLeft;
-      const walk = (x - startX) * 50;
+      const walk = (x - startX) * 100;
       gridContainer.current.scrollLeft = scrollLeft - walk;
     }
   });
@@ -674,7 +675,7 @@ function Home() {
         </div>
       </section>
 
-{/*=========== SEMI FOOTER */}
+{/*====================== SEMI FOOTER ========================*/}
       <div className={`${Styles.semi_footer} h-[450px] text-[var(--background-color)] flex justify-between items-center px-[5%] lg:px-[15%] gap-10`}>
         <div>
           <p className='text-[2rem] font-semibold leading-10 mb-5'>
@@ -687,6 +688,31 @@ function Home() {
 
         <div className='basis-[50%] flex justify-end'>
           <button className='bg-[var(--background-color)] py-2 px-4 rounded-[5px] text-[var(--text-color)]'>Read Our Story</button>
+        </div>
+      </div>
+
+
+
+
+      <div className='flex justify-between px-[15%] items-center pt-[170px] pb-[70px]'>
+        <h1 className='text-gray-500 text-[52px] flex flex-col leading-15'>
+          Broad
+          <span className='text-[var(--text-color)]'>Crypto support</span>
+        </h1>
+
+        <div className=''>
+          <p>We support 15 coins and all Ethereum and MultiversX tokens.</p>
+          <p className='flex items-center'>View full coin support <span className='material-icons'>arrow_forward_ios</span></p>
+        </div>
+      </div>
+
+      <div className={`${Styles.scroll_img} w-full overflow-x-scroll`}>
+        <div className='w-[5000px] mb-[20px]'>
+          <img src={cryptoAnim1} alt="" className='w-full'/>
+        </div>
+
+        <div className='w-[5000px]'>
+          <img src={cryptoAnim2} alt="" className='w-full'/>
         </div>
       </div>
       

@@ -152,6 +152,29 @@
   max-height: 750px;
 }
 
+
+
+.scroll_img {
+  scrollbar-width: none;
+}
+
+.scroll_img div:first-child {
+  animation: scroll 10s linear infinite;
+}
+
+.scroll_img div:last-child {
+  animation: scroll 10s linear infinite reverse;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  } to {
+    transform: translateX(-100px);
+  }
+}
+
+
 /*====================================== MEDIA QUERIES ======================================================*/
 @media  (max-width: 1200px) {
   /*===== SECTION2 MEDIA QUERY @1200px =======*/
