@@ -159,11 +159,11 @@
 }
 
 .scroll_img div:first-child {
-  animation: scroll 10s linear infinite;
+  animation: scroll 20s linear infinite;
 }
 
 .scroll_img div:last-child {
-  animation: scroll 10s linear infinite reverse;
+  animation: scroll 20s linear infinite reverse;
 }
 
 @keyframes scroll {

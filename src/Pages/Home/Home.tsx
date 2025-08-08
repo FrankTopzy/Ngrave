@@ -29,6 +29,7 @@ import { useEffect, useRef } from 'react';
 // HOME PAGE / LANDING PAGE //
 function Home() {
   const gridContainer = useRef<HTMLDivElement>(null);
+  const scrollImg = useRef<HTMLDivElement>(null);
 
   /*const gridRect: DOMRect | undefined = gridContainer.current?.getBoundingClientRect();
   //console.log(gridRect?.left);
@@ -90,7 +91,6 @@ function Home() {
   }); // end of scroll by dragging.
 
   //scroll by clicking
-
   function slideLeft(action: string): void {
     if(gridContainer.current && action === "slideLeft") {
       gridContainer.current.scrollLeft -= 400;
@@ -98,6 +98,11 @@ function Home() {
       gridContainer.current.scrollLeft += 400;
     }
   }
+
+  //disable scrolling
+  scrollImg?.current?.addEventListener('wheel', (e) => {
+    e.preventDefault();
+  }, {passive: false});
 
 
   return (
@@ -706,12 +711,12 @@ function Home() {
         </div>
       </div>
 
-      <div className={`${Styles.scroll_img} w-full overflow-x-scroll`}>
-        <div className='w-[5000px] mb-[20px]'>
+      <div className={`${Styles.scroll_img} w-full overflow-x-scroll`} ref={scrollImg}>
+        <div className='w-[6000px] mb-[20px]'>
           <img src={cryptoAnim1} alt="" className='w-full'/>
         </div>
 
-        <div className='w-[5000px]'>
+        <div className='w-[6000px]'>
           <img src={cryptoAnim2} alt="" className='w-full'/>
         </div>
       </div>
