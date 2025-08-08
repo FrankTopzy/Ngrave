@@ -100,9 +100,12 @@ function Home() {
   }
 
   //disable scrolling
-  scrollImg?.current?.addEventListener('wheel', (e) => {
-    e.preventDefault();
-  }, {passive: false});
+  useEffect(() => {
+    scrollImg?.current?.addEventListener('wheel', (e) => {
+      e.preventDefault();
+    });
+  }, [])
+
 
 
   return (
@@ -681,7 +684,7 @@ function Home() {
       </section>
 
 {/*====================== SEMI FOOTER ========================*/}
-      <div className={`${Styles.semi_footer} h-[450px] text-[var(--background-color)] flex justify-between items-center px-[5%] lg:px-[15%] gap-10`}>
+      <div className={`${Styles.semi_footer} h-[450px] text-[var(--background-color)] flex flex-col md:flex-row justify-between items-center px-[5%] lg:px-[15%] md:gap-10 gap-3`}>
         <div>
           <p className='text-[2rem] font-semibold leading-10 mb-5'>
             We empower people to master their wealth so they can live the life they want.
@@ -691,8 +694,8 @@ function Home() {
           <p>Empowering ownership since 2018. </p>
         </div>
 
-        <div className='basis-[50%] flex justify-end'>
-          <button className='bg-[var(--background-color)] py-2 px-4 rounded-[5px] text-[var(--text-color)]'>Read Our Story</button>
+        <div className='md:basis-[50%] basis-[30%] flex justify-end md:self-center self-start'>
+          <button className=' self-center bg-[var(--background-color)] py-2 px-4 rounded-[5px] text-[var(--text-color)] whitespace-nowrap'>Read Our Story</button>
         </div>
       </div>
 
@@ -712,12 +715,73 @@ function Home() {
       </div>
 
       <div className={`${Styles.scroll_img} w-full overflow-x-scroll`} ref={scrollImg}>
-        <div className='w-[6000px] mb-[20px]'>
+        <div className='w-[7000px] mb-[20px]'>
           <img src={cryptoAnim1} alt="" className='w-full'/>
         </div>
 
-        <div className='w-[6000px]'>
+        <div className='w-[7000px]'>
           <img src={cryptoAnim2} alt="" className='w-full'/>
+        </div>
+      </div>
+
+      <div className='px-[15%] mt-[150px] flex justify-between'>
+        <div>
+          <h1 className='text-gray-500 text-[52px] flex flex-col'>
+            Still got some
+            <span className='text-white'>Questions?</span>
+          </h1>
+        </div>
+
+        <div>
+          <hr />
+
+          <div>
+            <div className='flex gap-3'>
+              <span className="material-icons">keyboard_arrow_up</span>
+              <p>Which coins are supported?</p>
+            </div>
+
+            <p>
+
+            </p>
+          </div>
+
+          <hr />
+
+          <div>
+            <div className='flex gap-3'>
+              <span className="material-icons">keyboard_arrow_up</span>
+              <p>Which coins are supported?</p>
+            </div>
+
+            <p>
+              
+            </p>
+          </div>
+
+          <hr />
+
+          <div>
+            <div>
+
+            </div>
+
+            <p>
+              
+            </p>
+          </div>
+
+          <hr />
+
+          <div>
+            <div>
+
+            </div>
+
+            <p>
+              
+            </p>
+          </div>
         </div>
       </div>
       
