@@ -1,5 +1,6 @@
 import Styles from './home.module.css';
 import bg1 from '../../assets/ngrave/ngrave-bg6b.webp';
+import bg2 from '../../assets/ngrave/ngrave-bg7.webp';
 import ngravelogo from '../../assets/ngrave/logo2.webp';
 import ledgerlogo from '../../assets/ngrave/ledger-logo.webp';
 import trezorlogo from '../../assets/ngrave/trezor-logo.webp'
@@ -560,7 +561,7 @@ function Home() {
       </div>
 
       {/*======================================== SECTION 5 =============================================*/}
-      <section className={`${Styles.section5} ${Styles.slide_in_top} pt-[100px] bg-[var(--text-color)] text-[var(--background-color)]`}>
+      <section className={`${Styles.section5} ${Styles.slide_in_top} py-[100px] bg-[var(--text-color)] text-[var(--background-color)]`}>
         <h1 className='flex flex-col text-[52px] mb-[100px] text-gray-500 leading-14'>
           Built with the
           <span className='font-semibold text-black'>best materials</span>
@@ -672,6 +673,22 @@ function Home() {
           </div>
         </div>
       </section>
+
+{/*=========== SEMI FOOTER */}
+      <div className={`${Styles.semi_footer} h-[450px] text-[var(--background-color)] flex justify-between items-center px-[5%] lg:px-[15%] gap-10`}>
+        <div>
+          <p className='text-[2rem] font-semibold leading-10 mb-5'>
+            We empower people to master their wealth so they can live the life they want.
+            <span className='text-gray-500'> We are passionate about making the world of crypto a safer place.</span>
+          </p>
+
+          <p>Empowering ownership since 2018. </p>
+        </div>
+
+        <div className='basis-[50%] flex justify-end'>
+          <button className='bg-[var(--background-color)] py-2 px-4 rounded-[5px] text-[var(--text-color)]'>Read Our Story</button>
+        </div>
+      </div>
       
 
       <a href='#section1' className='fixed right-[50px] bottom-[50px]  bg-[var(--link-color)]'>

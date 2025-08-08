@@ -37,11 +37,12 @@ button {
 
 body {
   background: rgba(10, 10, 10, 0.938);
+  /*display: flex;
+  justify-content: center;*/
 }
 
 section {
-  width: 100%;
-  min-height: 100vh;
+  /*max-width: 2000px;*/
   padding-inline: 15%;
 }
 
