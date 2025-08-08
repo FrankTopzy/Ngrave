@@ -99,7 +99,30 @@
 }
 
 /*====================================== SECTION 3 ======================================================*/
-.section3 > div{
+.section3 > p{
+  font-size: 52px;
+  line-height: 60px;
+}
+
+.section3_table table td {
+  padding: 1.5rem;
+  font-weight: 600;
+  font-size: 17px;
+
+  max-width: 300px;
+  color: grey;
+}
+
+.section3_table table td:nth-child(2) {
+  color: #000;
+  background: #00cc9954;
+  border-right: 1px dashed #00CC99;
+  border-left: 1px dashed #00CC99;
+  overflow: hidden;
+}
+
+/*====================================== SECTION 4 ======================================================*/
+.section4 > div{
   align-items: center;
 }
 
@@ -125,32 +148,9 @@
   transition: all 0.3s ease-in-out;
 }
 
-.section3_grid > div {
+.section4_grid > div {
   max-height: 750px;
 }
-/*====================================== SECTION 4 ======================================================*/
-.section4 > p{
-  font-size: 52px;
-  line-height: 60px;
-}
-
-.section4_table table td {
-  padding: 1.5rem;
-  font-weight: 600;
-  font-size: 17px;
-
-  max-width: 300px;
-  color: grey;
-}
-
-.section4_table table td:nth-child(2) {
-  color: #000;
-  background: #00cc9954;
-  border-right: 1px dashed #00CC99;
-  border-left: 1px dashed #00CC99;
-  overflow: hidden;
-}
-
 
 /*====================================== MEDIA QUERIES ======================================================*/
 @media  (max-width: 1200px) {
@@ -176,7 +176,8 @@
     padding-inline: 5%;
   }
 
-  .section4 > p {
+  /*===================== SECTION 4 ==================*/
+  .section3 > p {
     font-size: 45px;
     line-height: normal;
   }
@@ -235,8 +236,8 @@
     gap: 20px;
   }
 
-  /*===== SECTION3 MEDIA QUERY =======*/
-  .section3 > div {
+  /*===== SECTION4 MEDIA QUERY =======*/
+  .section4 > div {
     flex-direction: column;
     gap: 20px;
   }
@@ -249,7 +250,7 @@
     display: none;
   }
 
-  .section4 > p {
+  .section3 > p {
     font-size: 30px;
     line-height: normal;
   }
@@ -272,7 +273,7 @@
 }
 
 @media (max-width: 450px) {
-  .section4_table table td {
+  .section3_table table td {
     font-size: 12px;
     padding: 0.7rem;
     font-size: 14px;

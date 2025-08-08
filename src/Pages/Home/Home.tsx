@@ -4,7 +4,7 @@ import ngravelogo from '../../assets/ngrave/logo2.webp';
 import ledgerlogo from '../../assets/ngrave/ledger-logo.webp';
 import trezorlogo from '../../assets/ngrave/trezor-logo.webp'
 import subBg1 from '../../assets/ngrave/ngrave-sub12.webp';
-import subBg2 from '../../assets/ngrave/ngrave-sub13.webp';
+import subBg2 from '../../assets/ngrave/ngrave-sub17.webp';
 import subBg3 from '../../assets/ngrave/ngrave-sub1.webp';
 import subBg4 from '../../assets/ngrave/ngrave-sub2.webp';
 import subBg5 from '../../assets/ngrave/ngrave-sub15.webp';
@@ -12,6 +12,10 @@ import subBg6 from '../../assets/ngrave/ngrave-sub16.webp';
 import subBg7 from '../../assets/ngrave/ngrave-sub3.webp';
 import subBg8 from '../../assets/ngrave/ngrave-sub18.webp';
 import subBg9 from '../../assets/ngrave/ngrave-sub17.webp';
+import subBg10 from '../../assets/ngrave/ngrave-sub20.webp';
+import subBg11 from '../../assets/ngrave/ngrave-sub13.webp';
+import subBg12 from '../../assets/ngrave/ngrave-sub19.webp';
+import subBg13 from '../../assets/ngrave/ngrave-sub21.webp';
 import quoteImg1 from '../../assets/quotes/quote-1.png';
 import bunny from '../../assets/ngrave/bunny.svg';
 import metamask from '../../assets/ngrave/fox.svg';
@@ -240,7 +244,74 @@ function Home() {
       </section>
 
       {/*======================================== SECTION 3 =============================================*/}
-      <section className={`${Styles.section3} ${Styles.slide_in_top} pt-[160px] pb-[40px]`}>
+      <section className={`${Styles.section3} ${Styles.slide_in_top} bg-[var(--primary-color)] py-[60px] text-black`}>
+        <p className='text-gray-500'>The Coldest Wallet</p>
+        <p className='font-bold text-black'>That Goes Further</p>
+
+        <div className={`${Styles.section3_table} flex justify-center my-[40px]`}>
+          <table>
+            <thead>
+              <tr>
+                <td></td>
+                <td className='border-t-1 border-[#00CC99] border-dashed rounded-tl-2xl rounded-tr-2xl'>
+                  <div>
+                    <img src={ngravelogo} alt="" />
+                    <p className='text-center mt-[30px] uppercase'>Zero</p>
+                  </div>
+                </td>
+
+                <td>
+                  <div>
+                    <img src={ledgerlogo} alt="" />
+                    <p className='text-center mt-[30px] uppercase'>Flex</p>
+                  </div>
+                </td>
+
+                <td>
+                  <div>
+                    <img src={trezorlogo} alt="" />
+                    <p className='text-center mt-[20px] uppercase'>Safe5</p>
+                  </div>
+                </td>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>EAL Level</td>
+                <td>EAL7 - Highest Certification Level</td>
+                <td>EAL6+</td>
+                <td>EAL6+</td>
+              </tr>
+
+              <tr>
+                <td>Offline Capability</td>
+                <td>Fully air-gapped (no USB, Bluetooth or Wi-Fi)</td>
+                <td>Requires USB/Bluetooth. Not air-gapped</td>
+                <td>Requires USB/Bluetooth. Not air-gapped</td>
+              </tr>
+
+              <tr>
+                <td>Backup Method</td>
+                <td>GRAPHENE steel plate + Perfect Key recovery</td>
+                <td>24-word seed + optional steel backup</td>
+                <td>24-word seed, microSD (Safe 5), SLIP39 optional</td>
+              </tr>
+
+              <tr>
+                <td>Coin Support</td>
+                <td className='border-b-1 border-[#00CC99] border-dashed rounded-b-2xl'>5 blockchains and ALL ERC-20 and ESDT Tokens</td>
+                <td>5,500+ coins</td>
+                <td>9000+ coins and tokens supported</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      {/*======================================== SECTION 4 =============================================*/}
+      
+      <section className={`${Styles.section4} ${Styles.slide_in_top} pt-[160px] pb-[40px]`}>
         <div className='items-center mb-[40px]'>
           <h1 className='text-[56px] font-bold flex flex-col w-full leading-[60px]'>
             <span className='text-[var(--grey-text)] font-light'>Handle your crypto</span> 
@@ -356,7 +427,7 @@ function Home() {
         </div>
       </section>
 
-      <div className={`${Styles.section3_slideDiv} ${Styles.slide_in_top} mb-[100px]`}>
+      <div className={`${Styles.section4_slideDiv} ${Styles.slide_in_top} mb-[100px]`}>
         <div className='flex flex-col md:flex-row justify-between gap-[15px] md:gap-[100px] md:items-center px-[5%] lg:px-[15%]'>
           <h1 className='text-[52px] text-gray-600 flex flex-col leading-[60px]'>
             Trusted <span className='text-white font-bold'>worldwide</span>
@@ -489,76 +560,101 @@ function Home() {
         </div>
       </div>
 
-      {/*======================================== SECTION 4 =============================================*/}
-      <section className={`${Styles.section4} ${Styles.slide_in_top} bg-[var(--primary-color)] py-[60px] text-black`}>
-        <p className='text-gray-500'>The Coldest Wallet</p>
-        <p className='font-bold text-black'>That Goes Further</p>
+      {/*======================================== SECTION 5 =============================================*/}
+      <section className={`${Styles.section5} ${Styles.slide_in_top} pt-[100px] bg-[var(--text-color)] text-[var(--background-color)]`}>
+        <h1 className='flex flex-col text-[52px] mb-[100px] text-gray-500 leading-14'>
+          Built with the
+          <span className='font-semibold text-black'>best materials</span>
+        </h1>
 
-        <div className={`${Styles.section4_table} flex justify-center my-[40px]`}>
-          <table>
-            <thead>
-              <tr>
-                <td></td>
-                <td className='border-t-1 border-[#00CC99] border-dashed rounded-tl-2xl rounded-tr-2xl'>
-                  <div>
-                    <img src={ngravelogo} alt="" />
-                    <p className='text-center mt-[30px] uppercase'>Zero</p>
-                  </div>
-                </td>
-
-                <td>
-                  <div>
-                    <img src={ledgerlogo} alt="" />
-                    <p className='text-center mt-[30px] uppercase'>Flex</p>
-                  </div>
-                </td>
-
-                <td>
-                  <div>
-                    <img src={trezorlogo} alt="" />
-                    <p className='text-center mt-[20px] uppercase'>Safe5</p>
-                  </div>
-                </td>
-              </tr>
-            </thead>
-
-            <tbody>
-              <tr>
-                <td>EAL Level</td>
-                <td>EAL7 - Highest Certification Level</td>
-                <td>EAL6+</td>
-                <td>EAL6+</td>
-              </tr>
-
-              <tr>
-                <td>Offline Capability</td>
-                <td>Fully air-gapped (no USB, Bluetooth or Wi-Fi)</td>
-                <td>Requires USB/Bluetooth. Not air-gapped</td>
-                <td>Requires USB/Bluetooth. Not air-gapped</td>
-              </tr>
-
-              <tr>
-                <td>Backup Method</td>
-                <td>GRAPHENE steel plate + Perfect Key recovery</td>
-                <td>24-word seed + optional steel backup</td>
-                <td>24-word seed, microSD (Safe 5), SLIP39 optional</td>
-              </tr>
-
-              <tr>
-                <td>Coin Support</td>
-                <td className='border-b-1 border-[#00CC99] border-dashed rounded-b-2xl'>5 blockchains and ALL ERC-20 and ESDT Tokens</td>
-                <td>5,500+ coins</td>
-                <td>9000+ coins and tokens supported</td>
-              </tr>
-            </tbody>
-          </table>
+        <div className='rounded-4xl overflow-hidden mb-[30px]'>
+          <img src={bg1} alt="" className='w-full h-[800px]'/>
         </div>
-      </section>
 
-      {/*======================================== SECTION 2 =============================================*/}
-      <section className={`${Styles.section5} ${Styles.slide_in_top} pt-[100px]`}>
-        
- 
+        <div className='flex justify-between gap-4'>
+          <div className='flex flex-col h-[700px] rounded-3xl bg-[#f0f0f0]'>
+            <img src={subBg10} alt="" />
+
+            <h2 className='text-[2rem] text-black leading-10 flex flex-col font-semibold px-[40px]'>
+              World's highest security-certified
+              <span className='text-gray-500'>financial product</span>
+            </h2>
+          </div>
+
+          <div className='flex flex-col rounded-3xl bg-[#f0f0f0] h-[700px] '>
+            <h2 className='flex-1 text-[2rem] text-black leading-10 flex flex-col font-semibold px-[40px] pt-[50px]'>
+              House-fire resistant backup.
+              <span className='text-gray-500'> High quality stainless steel.</span>
+            </h2>
+
+            <img src={subBg11} alt="subBg11" />
+          </div>
+
+          <div className='flex flex-col h-[700px] rounded-3xl bg-[#f0f0f0]'>
+            <img src={subBg12} alt="subBg12" />
+
+            <h2 className='text-[2rem] text-black leading-10 flex flex-col font-semibold px-[40px]'>
+              4-layer tamper resistance,
+              <span className='text-gray-500'>starting with its metal casing.</span>
+            </h2>
+          </div>
+        </div>
+
+        <div className='rounded-4xl bg-[#f0f0f0] flex flex-col mt-[70px]'>
+          <div className='flex items-center justify-between mt-[70px]'>
+            <div className='px-[90px]'>
+              <p className='flex flex-col text-[2rem] text-gray-500] w-[350px] leading-[57px]'>
+                NGRAVE store
+                <span className='font-bold text-[52px]'>Start truly owning your crypto</span>
+              </p>
+
+              <button className='bg-[var(--span-text-color)] py-1.5 px-5 mt-5 rounded-[7px]'>Buy Now</button>
+            </div>
+
+            <img src={subBg13} alt="" />
+          </div>
+
+          <div className='p-10'>
+            <div className='bg-white rounded-3xl flex md:flex-row flex-col p-10 py-5 text-[14px] gap-1.5 font-semibold'>
+              <div className='flex md:flex-col flex-row gap-5'>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 8.00012H17V4.00012H3C1.9 4.00012 1 4.90012 1 6.00012V17.0001H3C3 18.6601 4.34 20.0001 6 20.0001C7.66 20.0001 9 18.6601 9 17.0001H15C15 18.6601 16.34 20.0001 18 20.0001C19.66 20.0001 21 18.6601 21 17.0001H23V12.0001L20 8.00012ZM19.5 9.50012L21.46 12.0001H17V9.50012H19.5ZM6 18.0001C5.45 18.0001 5 17.5501 5 17.0001C5 16.4501 5.45 16.0001 6 16.0001C6.55 16.0001 7 16.4501 7 17.0001C7 17.5501 6.55 18.0001 6 18.0001ZM8.22 15.0001C7.67 14.3901 6.89 14.0001 6 14.0001C5.11 14.0001 4.33 14.3901 3.78 15.0001H3V6.00012H15V15.0001H8.22ZM18 18.0001C17.45 18.0001 17 17.5501 17 17.0001C17 16.4501 17.45 16.0001 18 16.0001C18.55 16.0001 19 16.4501 19 17.0001C19 17.5501 18.55 18.0001 18 18.0001Z" fill="#3197FF"></path></svg> 
+
+                <p>
+                  Next-Day Free Shipping. 
+                  <span className='text-gray-500'>We ship the very next day, free for orders above $300.</span>
+                </p>
+              </div>
+
+              <div className='flex md:flex-col flex-row gap-4'>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4C2.89 4 2.01 4.89 2.01 6L2 18C2 19.11 2.89 20 4 20H20C21.11 20 22 19.11 22 18V6C22 4.89 21.11 4 20 4ZM20 18H4V12H20V18ZM20 8H4V6H20V8Z" fill="#3197FF"></path></svg>
+
+                <p>
+                  Flexible payment options. 
+                  <span className='text-gray-500'>Pay with credit card, Bancontact, or even crypto.</span>
+                </p>
+              </div>
+
+              <div className='flex md:flex-col flex-row gap-5'>
+                <svg width="28" height="20" viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"><rect width="28" height="20" rx="4" fill="url(#pattern0)"></rect><defs><pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1"><use xlinkHref="#image0_3874_63473" transform="matrix(0.00502513 0 0 0.00703518 0 -0.108543)"></use></pattern><image id="image0_3874_63473" width="199" height="173" xlinkHref="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMcAAACtCAYAAAAEamv6AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAx6ADAAQAAAABAAAArQAAAAAMC/Z9AAAE90lEQVR4Ae3WzYkUcQBE8V5nPEwOngWzMAUPZmYcJuNBMAYDEGY/dEFZYRcW6vp+fRh6/kMd6lW/oW8ul8vD7e3tUb6u1+vx9cuH49PH78fx69RF8fbu+Pnj3fHt8/vjcn7ocvjb/PwoxuPD4ULgH4G74+44bh8eP7PX6Xw63mTbK47AKwTOr/zu5xKBF94oXzjKECFHZuqtaPXV6vFPwWvV9sxIBQiQIzCyihsBcmzcpAIEyBEYWcWNADk2blIBAuQIjKziRoAcGzepAAFyBEZWcSNAjo2bVIAAOQIjq7gRIMfGTSpAgByBkVXcCJBj4yYVIECOwMgqbgTIsXGTChAgR2BkFTcC5Ni4SQUIkCMwsoobAXJs3KQCBMgRGFnFjQA5Nm5SAQLkCIys4kaAHBs3qQABcgRGVnEjQI6Nm1SAADkCI6u4ESDHxk0qQIAcgZFV3AiQY+MmFSBAjsDIKm4EyLFxkwoQIEdgZBU3AuTYuEkFCJAjMLKKGwFybNykAgTIERhZxY0AOTZuUgEC5AiMrOJGgBwbN6kAAXIERlZxI0COjZtUgAA5AiOruBEgx8ZNKkCAHIGRVdwIkGPjJhUgQI7AyCpuBMixcZMKECBHYGQVNwLk2LhJBQiQIzCyihsBcmzcpAIEyBEYWcWNADk2blIBAuQIjKziRoAcGzepAAFyBEZWcSNAjo2bVIAAOQIjq7gRIMfGTSpAgByBkVXcCJBj4yYVIECOwMgqbgTIsXGTChAgR2BkFTcC5Ni4SQUIkCMwsoobAXJs3KQCBMgRGFnFjQA5Nm5SAQLkCIys4kaAHBs3qQABcgRGVnEjQI6Nm1SAADkCI6u4ESDHxk0qQIAcgZFV3AiQY+MmFSBAjsDIKm4EyLFxkwoQIEdgZBU3AuTYuEkFCJAjMLKKGwFybNykAgTIERhZxY0AOTZuUgEC5AiMrOJGgBwbN6kAAXIERlZxI0COjZtUgAA5AiOruBEgx8ZNKkCAHIGRVdwIkGPjJhUgQI7AyCpuBMixcZMKECBHYGQVNwLk2LhJBQiQIzCyihsBcmzcpAIEyBEYWcWNADk2blIBAuQIjKziRoAcGzepAAFyBEZWcSNAjo2bVIAAOQIjq7gRIMfGTSpAgByBkVXcCJBj4yYVIECOwMgqbgTIsXGTChAgR2BkFTcC5Ni4SQUIkCMwsoobAXJs3KQCBMgRGFnFjQA5Nm5SAQLkCIys4kaAHBs3qQABcgRGVnEjQI6Nm1SAADkCI6u4ESDHxk0qQIAcgZFV3AiQY+MmFSBAjsDIKm4EyLFxkwoQIEdgZBU3AuTYuEkFCJAjMLKKGwFybNykAgTIERhZxY0AOTZuUgEC5AiMrOJGgBwbN6kAAXIERlZxI0COjZtUgAA5AiOruBEgx8ZNKkCAHIGRVdwIkGPjJhUgQI7AyCpuBMixcZMKECBHYGQVNwLk2LhJBQiQIzCyihsBcmzcpAIEyBEYWcWNADk2blIBAuQIjKziRoAcGzepAAFyBEZWcSNAjo2bVIAAOQIjq7gRIMfGTSpAgByBkVXcCJBj4yYVIECOwMgqbgTIsXGTChAgR2BkFTcC5Ni4SQUIkCMwsoobAXJs3KQCBMgRGFnFjQA5Nm5SAQLkCIys4kaAHH+53d9Acdw9PUT/3T4dxu7Of65Y5ed1r9fr88Piyf1T6dP59PQlevcb0BYkVHEDvIwAAAAASUVORK5CYII="></image></defs></svg>
+
+
+                <p>
+                  Made in Belgium. 
+                  <span className='text-gray-500'>All our products are manufactured in Belgium, Europe.</span>
+                </p>
+              </div>
+
+              <div className='flex md:flex-col flex-row gap-5'>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.01 14H2V16H9.01V19L13 15L9.01 11V14ZM14.99 13V10H22V8H14.99V5L11 9L14.99 13Z" fill="#3197FF"></path></svg>
+
+                <p>
+                  30-day return. 
+                  <span className='text-gray-500'> Return within 30 days and get all your money back.</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
       
 
