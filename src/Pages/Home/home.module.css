@@ -348,3 +348,20 @@
   background-position: center;
   background-size: cover;
 }
+
+
+.footer_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.footer_grid > div > ul > li, .footer_grid h2{
+  margin-bottom: 5px;
+  white-space: nowrap;
+}
+
+.footer_grid > div > h2 {
+  color: grey;
+  font-size: 13px;
+}
