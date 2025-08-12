@@ -19,56 +19,58 @@ function SectionE() {
             <img src={bg1} alt="" className='w-full h-[800px]'/>
           </div>
 
-          <div className='flex md:flex-row flex-col justify-between gap-4'>
-            <div className={`${Styles.discover_link} relative flex flex-col h-[800px] rounded-3xl bg-[#f0f0f0]`}>
+          <div className={`${Styles.section5_main_content} flex md:flex-row flex-col justify-between gap-4`}>
+            <div className={`${Styles.discover_link} relative flex flex-col pb-[40px] gap-[70px] rounded-3xl bg-[#f0f0f0]`}>
               <img src={subBg10} alt="" />
 
-              <h2 className='text-[2rem] text-black leading-10 flex flex-col font-semibold px-[40px]'>
+              <h2 className={`${Styles.subText} text-[2rem] text-black leading-10 flex flex-col font-semibold px-[40px]`}>
                 World's highest security-certified
                 <span className='text-gray-500'>financial product</span>
-              </h2>
 
-              <p className={`${Styles.discover_link_link} absolute bottom-2 right-2 flex justify-between items-center text-[var(--text-color)] border-none rounded-[40px] overflow-hidden`}>
-                <span className=' py-1 pl-3'>Discover ZERO</span>
-                <span className="material-icons bg-[var(--background-color)] border-0 rounded-4xl py-2 px-2">arrow_forward_ios</span>
-              </p>
+                <p className={`${Styles.discover_link_link} absolute text-[16px] font-normal bottom-2 right-2 flex justify-between items-center text-[var(--text-color)] border-none rounded-[40px] overflow-hidden`}>
+                  <span className=' py-1 pl-3'>Discover ZERO</span>
+                  <span className="material-icons bg-[var(--background-color)] border-0 rounded-4xl py-2 px-2">arrow_forward_ios</span>
+                </p>
+              </h2>
             </div>
 
-            <div className={`${Styles.discover_link} relative flex flex-col h-[800px] rounded-3xl bg-[#f0f0f0]`}>
+            <div className={`${Styles.discover_link} relative flex flex-col gap-[70px] rounded-3xl bg-[#f0f0f0]`}>
               <h2 className='flex-1 text-[2rem] text-black leading-10 flex flex-col font-semibold px-[40px] pt-[50px]'>
                 House-fire resistant backup.
                 <span className='text-gray-500'> High quality stainless steel.</span>
               </h2>
 
-              <img src={subBg11} alt="subBg11" />
+              <div className={`${Styles.subText}`}>
+                <img src={subBg11} alt="subBg11" />
 
-              <p className={`${Styles.discover_link_link} absolute bottom-2 right-2 flex justify-between items-center text-[var(--text-color)] border-none rounded-[40px] overflow-hidden`}>
-                <span className=' py-1 pl-3'>Discover ZERO</span>
-                <span className="material-icons bg-[var(--background-color)] border-0 rounded-4xl py-2 px-2">arrow_forward_ios</span>
-              </p>
+                <p className={`${Styles.discover_link_link} absolute bottom-2 right-2 flex justify-between items-center text-[var(--text-color)] border-none rounded-[40px] overflow-hidden`}>
+                  <span className=' py-1 pl-3'>Discover ZERO</span>
+                  <span className="material-icons bg-[var(--background-color)] border-0 rounded-4xl py-2 px-2">arrow_forward_ios</span>
+                </p>
+              </div>
             </div>
 
-            <div className={`${Styles.discover_link} relative flex flex-col h-[800px] rounded-3xl bg-[#f0f0f0]`}>
+            <div className={`${Styles.discover_link} relative flex flex-col gap-[70px] rounded-3xl bg-[#f0f0f0]`}>
               <img src={subBg12} alt="subBg12" />
 
-              <h2 className='text-[2rem] text-black leading-10 flex flex-col font-semibold px-[40px]'>
+              <h2 className={`${Styles.subText} text-[2rem] text-black leading-10 flex flex-col font-semibold pb-[40px] px-[40px]`}>
                 4-layer tamper resistance,
                 <span className='text-gray-500'>starting with its metal casing.</span>
-              </h2>
 
-              <p className={`${Styles.discover_link_link} absolute bottom-2 right-2 flex justify-between items-center text-[var(--text-color)] border-none rounded-[40px] overflow-hidden`}>
-                <span className=' py-1 pl-3'>Discover ZERO</span>
-                <span className="material-icons bg-[var(--background-color)] border-0 rounded-4xl py-2 px-2">arrow_forward_ios</span>
-              </p>
+                <p className={`${Styles.discover_link_link} absolute text-[16px] font-normal bottom-2 right-2 flex justify-between items-center text-[var(--text-color)] border-none rounded-[40px] overflow-hidden`}>
+                  <span className=' py-1 pl-3'>Discover ZERO</span>
+                  <span className="material-icons bg-[var(--background-color)] border-0 rounded-4xl py-2 px-2">arrow_forward_ios</span>
+                </p>
+              </h2>
             </div>
           </div>
 
           <div className='rounded-4xl bg-[#f0f0f0] flex flex-col mt-[70px]'>
             <div className='flex flex-col md:flex-row items-center justify-between mt-[70px]'>
               <div className='lg:pl-[90px] pl-[40px]'>
-                <p className='flex flex-col text-[2rem] text-gray-500] w-[350px] leading-[57px]'>
+                <p className='flex flex-col text-[1.5rem] sm:text-[2rem] text-gray-500] w-[350px] leading-normal sm:leading-[57px]'>
                   NGRAVE store
-                  <span className='font-bold text-[40px] md:text-[52px]'>Start truly owning your crypto</span>
+                  <span className='font-bold text-[30px] sm:text-[40px] md:text-[52px]'>Start truly owning your crypto</span>
                 </p>
 
                 <button className='bg-[var(--span-text-color)] py-1.5 px-5 mt-5 rounded-[7px]'>Buy Now</button>

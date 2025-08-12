@@ -1,0 +1,73 @@
+.subText > p > span:first-child {
+  transform: translateX(100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.1s ease-in-out;
+}
+
+.discover_link:hover > .subText > p {
+  background: black;
+}
+
+.discover_link_others:hover > .subText > p {
+  background: white;
+}
+
+.discover_link:hover .discover_link_link  > span:first-child{
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+  transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 1200px) {
+  .section5 {
+    background: red;
+    padding-inline: 5%;
+  }
+
+  .section5 > div > h1 {
+    font-size: 30px;
+    line-height: normal;
+    margin-bottom: 30px;
+  }
+
+  .section5_main_content > div h2 {
+    padding-inline: 20px;
+  }
+
+  .discover_link h2 {
+    font-size: 25px;
+    line-height: normal;
+  } 
+}
+
+@media (max-width: 1024px) {
+  .section5 {
+    background: orange;
+  }
+}
+
+@media (max-width: 1000px) {
+  .section5 {
+    background: yellow;
+  }
+}
+
+@media (max-width: 800px) {
+  .section5 {
+    background: blue;
+  }
+}
+
+@media (max-width: 600px) {
+  .section5 {
+    background: gray;
+  }
+}
+
+@media (max-width: 450px) {
+  .section5 {
+    background: green;
+  }
+}
