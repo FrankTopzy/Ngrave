@@ -43,7 +43,7 @@ function Cart() {
   }, []);
 
   return (
-    <div className={`${Styles.cart_container} w-full min-h-[100vh] flex justify-end`} ref={cartbar}>
+    <div className={`${Styles.cart_container} w-full min-h-[100vh] flex justify-end transition duration-200`} ref={cartbar}>
       <div className='flex-1' ref={subCartCon}></div>
 
       <div className={`${Styles.cart} bg-white max-w-[400px] flex flex-col text-[var(--background-color)] p-4`}>

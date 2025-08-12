@@ -51,3 +51,61 @@ section {
 img {
   max-width: 100%;
 }
+
+/*============================ media query =======================*/
+@media (max-width: 1024px) {
+  section {
+    width: 100%;
+    min-height: 100vh;
+    padding-inline: 5%;
+  }
+}
+
+@media  (max-width: 770px) {
+  h1 {
+    font-size: 32px;
+    line-height: normal;
+  }
+}
+
+@media (max-width: 600px) {
+
+}
+
+@media (max-width: 450px) {
+
+}
+
+
+/*ANIMATIONS*/
+@media (prefers-reduced-motion: no-preference) {
+  .slide_in {
+    animation: slideIn 1s linear 1 both;
+  }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(100px);
+    } to {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+
+  .slide_in_top {
+    animation: slideIn linear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 70vh;
+  }
+
+  @keyframes slideInTop {
+    from {
+      opacity: 0;
+      transform: translateY(100px);
+    } to {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+}

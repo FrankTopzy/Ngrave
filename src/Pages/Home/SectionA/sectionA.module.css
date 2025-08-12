@@ -1,0 +1,156 @@
+.home_section1 {
+  min-height: calc(100vh - 48px);
+  width: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)), url(../../../assets/ngrave/ngrave-bg6.webp);
+  padding: 0px 5%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.home_section1 > div:first-child {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.banner_div {
+  visibility: hidden;
+}
+
+.home_context { 
+  width: 550px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.span_text {
+  color: var(--span-text-color);
+}
+
+@media (max-width: 1024px) {
+  section {
+    width: 100%;
+    min-height: 100vh;
+    padding-inline: 5%;
+  }
+
+  /*===================== SECTION 3 ==================*/
+  .section3 > p {
+    font-size: 45px;
+    line-height: normal;
+  }
+
+  .footer_abs {
+    display: none;
+  }
+}
+
+@media  (max-width: 770px) {
+  /*===== SECTION1 MEDIA QUERY =======*/
+  h1 {
+    font-size: 32px;
+    line-height: normal;
+  }
+
+  .home_section1 {
+    position: static;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background: rgb(13, 10, 26);
+  }
+
+  .home_context {
+    margin-top: 100px;
+    padding: 0 5%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .home_context > div,
+  button {
+    font-size: 16px;
+  }
+
+  .home_section1 > div:first-child {
+    grid-template-columns: 1fr;
+  }
+
+  .banner_div {
+    height: 50%;
+    visibility: visible;
+  }
+
+  .home_banner {
+    object-fit: contain;
+  }
+
+  
+  /*===== SECTION2 MEDIA QUERY =======*/
+  .section2 > div > div {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /*===== SECTION4 MEDIA QUERY =======*/
+  .section4 > div {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .discover_link > div:first-child {
+    padding: 40px;
+  }
+
+  .discover_link > p > span:first-child{
+    display: none;
+  }
+
+  .section3 > p {
+    font-size: 30px;
+    line-height: normal;
+  }
+
+  .section4_table table td:nth-child(1) {
+    display: none;
+  }
+
+  .section4_table table td {
+    padding: 1.5rem;
+    padding-inline: 1rem;
+    font-size: 14px;
+  }
+
+
+  .section3_table table td:first-child {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .home_context {
+    padding: 0 3%;
+  }
+}
+
+@media (max-width: 450px) {
+  .section3_table table td {
+    font-size: 12px;
+    padding: 0.7rem;
+    font-size: 14px;
+  }
+
+  .section2 iframe {
+    height: 400px;
+  }
+}

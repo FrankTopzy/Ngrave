@@ -20,14 +20,12 @@ import subBg12 from '../../assets/ngrave/ngrave-sub19.webp';
 import subBg13 from '../../assets/ngrave/ngrave-sub21.webp';
 import subBg14 from '../../assets/ngrave/ngrave-sub11.svg';
 import trustpilot from '../../assets/ngrave/trustpilot-footer-light.svg';
-import ratingImg  from '../../assets/ngrave/rating.svg';
 import quoteImg1 from '../../assets/quotes/quote-1.png';
-import bunny from '../../assets/ngrave/bunny.svg';
-import metamask from '../../assets/ngrave/fox.svg';
 import { Link } from 'react-router-dom';
 import Navbar from '../../Components/Navbar/Navbar';
 import Sidebar from '../../Components/Sidebar/Sidebar';
 import { useEffect, useRef, useState } from 'react';
+import SectionA from './SectionA/SectionA';
 
 // HOME PAGE / LANDING PAGE //
 function Home() {
@@ -117,41 +115,11 @@ function Home() {
       <Navbar/>
       <Sidebar/>
       {/*=============================SECTION 1========================================*/}
-      <section className={`${Styles.home_section1}`} id='section1'>
-        <div className='max-w-[1400px] mx-auto grid'>
-          <div className={`${Styles.home_context} ${Styles.slide_in} w-full`}>
-            <h1 className='text-6xl font-bold leading-tight'>The <span className={`${Styles.span_text}`}>Most Secure</span> Wallet Ever Built</h1>
-
-            <div className={`flex flex-col gap-3`}>
-              <p className='text-[var(--grey-text)] text-[1.3rem]'>World's most secure air-gapped wallet with biometrics and EAL7 security, and its recoverable stainless steel backup.</p>
-
-              <div className='text-[1.2rem] font-bold flex gap-2 items-center'>
-                <p>Compatible <span className='text-[var(--grey-text)]'>with: </span></p>
-                <img src={metamask} alt="" />
-                <img src={bunny} alt="" />
-              </div>
-            </div>
-
-            <div className='flex gap-2.5'>
-              <button type='button' className='px-[25px] py-2.5 bg-[var(--span-text-color)] text-[1.3rem] border-none rounded-[10px] text-[var(--background-color)]'>
-                Buy Now
-              </button>
-
-              <button type='button' className='px-[25px] py-2.5 bg-transparent text-[1.3rem] border-2 border-[var(--grey-text)] rounded-[10px] text-[var(--text-color)]'>
-                Learn More
-              </button>
-            </div>
-          </div>
-
-          <div className={`${Styles.banner_div}`}>
-            <img src={bg1} alt="" className={`${Styles.home_banner} w-full object-contain`}/>
-          </div>
-        </div>
-      </section>
+      <SectionA />
 
       {/*======================================== SECTION 2 =============================================*/}
-      <section className={`${Styles.section2} ${Styles.slide_in_top} pb-[50px] pt-[100px] bg-[#000000] flex justify-center`}>
-        <div className='max-w-[1400px]'>
+      <section className={`${Styles.section2} ${Styles.slide_in_top} pb-[50px] pt-[100px] bg-[#000000]`}>
+        <div className='max-w-[1400px] flex flex-col justify-center'>
           <div className='items-center mb-[40px]'>
             <h1 className='text-[56px] font-bold flex flex-col w-full leading-[60px]'>
               <span className='text-[var(--grey-text)] font-light'>Most secure combo</span> 
@@ -259,8 +227,8 @@ function Home() {
       </section>
 
       {/*======================================== SECTION 3 =============================================*/}
-      <section className={`${Styles.section3} ${Styles.slide_in_top} bg-[var(--primary-color)] py-[60px] text-black flex justify-center`}>
-        <div className='max-w-[1400px]'>
+      <section className={`${Styles.section3} ${Styles.slide_in_top} bg-[var(--primary-color)] py-[60px] text-black`}>
+        <div className='max-w-[1400px] flex justify-center flex-col'>
           <p className='text-gray-500'>The Coldest Wallet</p>
           <p className='font-bold text-black'>That Goes Further</p>
 
@@ -327,8 +295,8 @@ function Home() {
       </section>
 
       {/*======================================== SECTION 4 =============================================*/}
-      <section className={`${Styles.section4} ${Styles.slide_in_top} pt-[160px] pb-[40px] flex justify-center`}>
-        <div className='max-w-[1400px]'>
+      <section className={`${Styles.section4} ${Styles.slide_in_top} pt-[160px] pb-[40px]`}>
+        <div className='max-w-[1400px] flex justify-center px-[5%]'>
           <div className='items-center mb-[40px]'>
             <h1 className='text-[56px] font-bold flex flex-col w-full leading-[60px]'>
               <span className='text-[var(--grey-text)] font-light'>Handle your crypto</span> 
@@ -356,7 +324,7 @@ function Home() {
             </p>
           </div>
 
-          <div className={`${Styles.section3_grid} mb-[200px] grid grid-cols-[repeat(auto-fill,minmax(450px,1fr))] gap-[1rem] text-[var(--text-color)]`}>
+          <div className={`${Styles.section3_grid} mb-[200px] grid grid-cols-[repeat(auto-fill, minmax(450px,1fr))] gap-[1rem] text-[var(--text-color)]`}>
 
             <div className={`${Styles.discover_link} relative bg-sky-700 border-none rounded-2xl overflow-hidden`}>
               <div className='border-none rounded-2xl p-10'>
@@ -712,8 +680,6 @@ function Home() {
         </div>
       </div>
 
-
-
       <div className='flex justify-center bg-black lg:px-[15%] px-[5%]'>
         <div className='flex justify-between items-center w-[1400px]  pt-[170px] pb-[70px]'>
           <h1 className='text-gray-500 text-[52px] flex flex-col leading-15'>
@@ -738,8 +704,8 @@ function Home() {
         </div>
       </div>
 
-      <div className='px-[15%] pb-[70px] mt-[150px] flex justify-center min-h-[100vh]'>
-        <div className='max-w-[1400px] flex justify-between'>
+      <div className='pb-[70px] mt-[150px] flex justify-center min-h-[100vh]'>
+        <div className='max-w-[1400px] flex justify-between lg:flex-row flex-col px-[5%]'>
           <div>
             <h1 className='text-gray-500 text-[52px] flex flex-col mb-[50px]'>
               Still got some
@@ -747,7 +713,7 @@ function Home() {
             </h1>
 
 
-            <div className='absolute left-0'>
+            <div className={`${Styles.footer_abs} absolute left-0`}>
               <img src={subBg14} alt="" className=''/>
             </div>
           </div>
@@ -887,13 +853,13 @@ function Home() {
       </div>
 
       <footer className='flex justify-center'>
-        <div className='max-w-[1400px] bg-black'>
-          <div className='pb-[40px] flex justify-between gap-4'>
-            <div className='flex justify-center basis-[25%] '>
+        <div className='max-w-[1400px] bg-black px-[5%]'>
+          <div className='pb-[40px] flex lg:flex-row flex-col justify-between gap-4'>
+            <div className='flex justify-center basis-[25%]'>
               <img src={ngravelogo} alt="ngravelogo" width='200' className='self-start bg-white'/>
             </div>
 
-            <div className={`${Styles.footer_grid} flex-1 text-[14px] font-semibold`}>
+            <div className={`${Styles.footer_grid} flex-1 text-[14px] font-semibold bg-amber-900`}>
               <div>
                 <h2>Products</h2>
                 <ul>
@@ -939,7 +905,7 @@ function Home() {
               </div>
             </div>
 
-            <div className='basis-[30%]'>
+            <div className='basis-[38%]'>
               <h1 className='text-[30px] font-semibold'>Get the latest news</h1>
 
               <p className='text-gray-500 mb-[20px]'>Be the first to hear about new features and exclusive offers.</p>
@@ -964,7 +930,7 @@ function Home() {
 
           <hr />
 
-          <div className='pt-[40px] flex gap-[70px] pb-[70px]'>
+          <div className='pt-[40px] flex lg:flex-row flex-col gap-[10px] justify-between pb-[70px]'>
             <div className='text-gray-600 leading-5 text-[14px]'>
               <p className='mb-[20px]'>© 2025 NGRAVE All rights reserved. | Ngrave.IO NV | Registered in Belgium | Senator A. Jeurissenlaan 1156, 3520 Zonhoven | 1177 Avenue of the Americas, 7th floor, New York, NY 10036, USA</p>
 
@@ -986,7 +952,6 @@ function Home() {
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/twitter/twitter-original.svg" width='40px'  className='bg-white border-2 rounded-full'/>
   
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" width='40px'/>
-          
             </div>
           </div>
         </div>
