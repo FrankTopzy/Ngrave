@@ -84,5 +84,7 @@
 }
 
 @media (max-width: 450px) {
-
+  .home_section1 > div > div > div p {
+    font-size: 1rem;
+  }
 }

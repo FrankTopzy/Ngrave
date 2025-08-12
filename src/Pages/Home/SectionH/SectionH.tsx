@@ -7,7 +7,7 @@ function SectionH() {
 
   return (
     <div>
-      <section className='pb-[70px] mt-[150px] flex justify-center min-h-[100vh]'>
+      <section className='pb-[70px] mt-[150px] flex justify-center min-h-[100vh] overflow-x-hidden'>
         <div className='max-w-[1400px] flex justify-between lg:flex-row flex-col px-[5%]'>
           <div>
             <h1 className='text-gray-500 text-[52px] flex flex-col mb-[50px]'>

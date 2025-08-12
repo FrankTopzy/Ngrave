@@ -10,21 +10,20 @@ function Navbar() {
   const { sidebar } = useContext(ProductsContext) ?? {};
 
   return (
-    <div className='fixed z-50 w-full flex justify-center'>
-      <div className='w-full absolute bg-[var(--background-color)] h-full'></div>
+    <div className='fixed z-50 w-full flex justify-center bg-black'>
       <header className={`${Styles.header}`}>
         <div className={`${Styles.logo}`}>
-          <img src={logoImg} alt="" width='40'/>
+          <img src={logoImg} alt="" width='40' className='md:w-[40px] w-[30px]'/>
           <Link to={'/'}>NGRAVE</Link>
         </div>
 
         <nav className="nav">
           <ul className={`${Styles.nav_list}`}>
-            <li>Products</li>
-            <li>Resourses</li>
-            <li>Support</li>
-            <li>Business</li>
-            <li className='text-center'>About NGRAVE</li>
+            <Link to={'/shop'}>Products</Link>
+            <Link to={'/shop'}>Resourses</Link>
+            <Link to={'/shop'}>Support</Link>
+            <Link to={'/shop'}>Business</Link>
+            <Link to={'/shop'} className='text-center'>About NGRAVE</Link>
           </ul>
         </nav>
 

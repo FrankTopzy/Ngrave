@@ -1,13 +1,12 @@
 /*====================================== SECTION 3 ======================================================*/
-.section3 > div > p{
-  font-size: 52px;
-  line-height: 60px;
+.section3 > div > div > p{
+  line-height: normal;
 }
 
 .section3_table table td {
   padding: 1.5rem;
   font-weight: 600;
-  font-size: 17px;
+  font-size: 15px;
 
   max-width: 300px;
   color: grey;
@@ -19,15 +18,6 @@
   border-right: 1px dashed #00CC99;
   border-left: 1px dashed #00CC99;
   overflow: hidden;
-}
-
-
-@media (max-width: 1024px) {
-  /*===================== SECTION 3 ==================*/
-  .section3 > p {
-    font-size: 45px;
-    line-height: normal;
-  }
 }
 
 @media  (max-width: 770px) {  
@@ -43,8 +33,7 @@
 
 @media (max-width: 450px) {
   .section3_table table td {
-    font-size: 12px;
     padding: 0.7rem;
-    font-size: 14px;
+    font-size: 13px;
   }
 }

@@ -101,16 +101,10 @@ function Home() {
     <div className='relative'>
       <Navbar/>
       <Sidebar/>
-      {/*=============================SECTION 1========================================*/}
+
       <SectionA />
-
-      {/*======================================== SECTION 2 =============================================*/}
       <SectionB />
-
-      {/*======================================== SECTION 3 =============================================*/}
       <SectionC />
-
-      {/*======================================== SECTION 4 =============================================*/}
       <SectionD />
 
       <div className={`${Styles.section4_slideDiv} ${Styles.slide_in_top} mb-[100px]`}>
@@ -246,10 +240,7 @@ function Home() {
         </div>
       </div>
 
-      {/*======================================== SECTION 5 =============================================*/}
       <SectionE />
-
-      {/*====================== SEMI FOOTER ========================*/}
       <SectionF />
 
       <SectionG />
@@ -265,9 +256,7 @@ function Home() {
       </div>
 
       <SectionH />
-
       <Footer />
-      
 
       <a href='#section1' className='fixed right-[50px] bottom-[50px]  bg-[var(--link-color)]'>
         up

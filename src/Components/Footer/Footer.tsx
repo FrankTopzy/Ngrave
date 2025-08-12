@@ -5,7 +5,7 @@ import Styles from './footer.module.css';
 function Footer() {
   return (
     <div>
-      <footer className='flex justify-center'>
+      <footer className={`${Styles.footer} flex justify-center`}>
         <div className='max-w-[1400px] bg-black px-[5%]'>
           <div className='pb-[40px] flex lg:flex-row flex-col justify-between gap-4'>
             <div className='flex justify-center basis-[25%]'>

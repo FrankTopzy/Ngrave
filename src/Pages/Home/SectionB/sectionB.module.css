@@ -1,8 +1,7 @@
-
 /*====================================== SECTION 2=======================================================*/
 .section2 > div > div{
   display: flex;
-  gap: 40px;
+  gap: 25px;
 }
 
 .section2_main_img > div {
@@ -35,12 +34,10 @@
   gap: 4px;
 }
 
-
 .section2_bottom > div {
-  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
 }
 
 .section2_bottom > div > div{
@@ -65,9 +62,12 @@
   color: var(--link-color);
 }
 
-
 @media  (max-width: 1200px) {
   /*===== SECTION2 MEDIA QUERY @1200px =======*/
+  .section2 {
+    padding-inline: 5%;
+  }
+
   .section2 div h1 {
     font-size: 36px;
     line-height: normal;
@@ -82,16 +82,50 @@
   }
 }
 
-@media  (max-width: 770px) {  
+@media (max-width: 1024px) {
+  .iframe {
+    height: 500px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .section2_bottom {
+    font-size: 14px;
+  }
+}
+
+@media  (max-width: 800px) {  
   /*===== SECTION2 MEDIA QUERY =======*/
+  .section2 {
+    padding-inline: 15%;
+  }
+
   .section2 > div > div {
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .section2 {
+    padding-inline: 5%;
   }
 }
 
 @media (max-width: 450px) {
   .section2 iframe {
     height: 400px;
+  }
+
+  .section2 > div > div h1{
+    font-size: 1.8rem;
+  }
+
+  .section2 > div > div p{
+    font-size: 0.9rem;
+  }
+
+  .section2_main_img > div > div h1 {
+    font-size: 20px;
   }
 }
