@@ -6,7 +6,7 @@ import subBg2 from '../../../assets/ngrave/ngrave-sub17.webp';
 function SectionB() {
   return (
     <div>
-      <section className={`${Styles.section2} ${Styles.slide_in_top} pb-[50px] pt-[100px] bg-[#000000]`}>
+      <section className={`${Styles.section2} slide_in_top pb-[50px] pt-[100px] bg-[#000000]`}>
         <div className='max-w-[1400px] flex flex-col justify-center'>
           <div className='items-center mb-[40px]'>
             <h1 className='text-[56px] font-bold flex flex-col w-full leading-[60px]'>

@@ -6,7 +6,7 @@ import ngravelogo from '../../../assets/ngrave/logo2.webp';
 function SectionC() {
   return (
     <div>
-            <section className={`${Styles.section3} ${Styles.slide_in_top} bg-[var(--primary-color)] py-[60px] text-black`}>
+            <section className={`${Styles.section3} slide_in_top bg-[var(--primary-color)] py-[60px] text-black`}>
         <div className='max-w-[1400px] flex justify-center flex-col'>
           <p className='text-gray-500'>The Coldest Wallet</p>
           <p className='font-bold text-black'>That Goes Further</p>
