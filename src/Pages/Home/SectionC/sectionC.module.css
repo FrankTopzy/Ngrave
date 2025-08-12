@@ -20,7 +20,7 @@
   overflow: hidden;
 }
 
-@media  (max-width: 770px) {  
+@media  (max-width: 800px) {  
   .section3 > p {
     font-size: 30px;
     line-height: normal;
@@ -30,6 +30,7 @@
     display: none;
   }
 }
+
 
 @media (max-width: 450px) {
   .section3_table table td {
