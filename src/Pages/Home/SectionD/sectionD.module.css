@@ -1,0 +1,58 @@
+/*====================================== SECTION 4 ======================================================*/
+.section4 > div > div{
+  align-items: center;
+}
+
+.discover_link > p > span:first-child{
+  transform: translateX(100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.1s ease-in-out;
+}
+
+.discover_link:hover > p {
+  background: black;
+}
+
+.discover_link_others:hover > p {
+  background: white;
+}
+
+.discover_link:hover .discover_link_link  > span:first-child{
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+  transition: all 0.3s ease-in-out;
+}
+
+.section4_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 1rem;
+}
+
+@media  (max-width: 770px) {  
+  /*===== SECTION4 MEDIA QUERY =======*/
+  .section4 > div {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .discover_link > div:first-child {
+    padding: 40px;
+  }
+
+  .discover_link > p > span:first-child{
+    display: none;
+  }
+
+  .section4_table table td:nth-child(1) {
+    display: none;
+  }
+
+  .section4_table table td {
+    padding: 1.5rem;
+    padding-inline: 1rem;
+    font-size: 14px;
+  }
+}
