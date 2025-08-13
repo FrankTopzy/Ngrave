@@ -64,9 +64,6 @@ function SectionB() {
           </div>
         </div>
 
-        <iframe width="560" height="800" src="https://www.youtube.com/embed/14HIIUjOLGY?si=o9m4fNzwn2S_ng2t" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen
-        className={`${Styles.iframe} h-[800px] w-full border-none rounded-3xl mb-[70px] outline-none`}></iframe>
-
         <div className={`${Styles.section2_bottom} text-[var(--grey-text)] text-[18px] gap-5`}>
           <div>
             <div>01</div>

@@ -27,7 +27,7 @@
 
 .section4_grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(00px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
   gap: 1rem;
 }
 
@@ -39,6 +39,12 @@
   .section4 > div > div > h1 {
     font-size: 32px;
     line-height: normal;
+  }
+
+  .section4_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 1rem;
   }
 
   .section4 > div > div > p {
