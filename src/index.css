@@ -45,7 +45,7 @@ body {
 
 section {
   /*max-width: 2000px;*/
-  padding-inline: 15%;
+  /* padding-inline: 15%; */
 }
 
 img {
@@ -60,7 +60,6 @@ img {
 @media (max-width: 1024px) {
   section {
     width: 100%;
-    min-height: 100vh;
     padding-inline: 5%;
   }
 }
@@ -71,15 +70,6 @@ img {
     line-height: normal;
   }
 }
-
-@media (max-width: 600px) {
-
-}
-
-@media (max-width: 450px) {
-
-}
-
 
 /*ANIMATIONS*/
 @media (prefers-reduced-motion: no-preference) {

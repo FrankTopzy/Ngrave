@@ -1,6 +1,38 @@
 /*====================================== MEDIA QUERIES ======================================================*/
+
+@media (max-width: 1200px) {
+
+}
+
 @media (max-width: 1024px) {
   .footer_abs {
     display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+
+}
+
+@media (max-width: 1000px) {
+
+}
+
+@media (max-width: 800px) {
+
+}
+
+
+@media (max-width: 600px) {
+  .sectionH > div > div > h1 {
+    font-size: 25px;
+  }
+
+  .dropdown > div > div > div > p {
+    font-size: 15px;
+  }
+
+  .dropdown > div > div > div > div > div {
+    font-size: 13px;
   }
 }

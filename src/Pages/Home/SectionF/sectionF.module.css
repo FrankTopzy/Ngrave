@@ -5,3 +5,9 @@
   background-position: center;
   background-size: cover;
 }
+
+@media (max-width: 600px) {
+  .semi_footer {
+    background: #fff;
+  }
+}

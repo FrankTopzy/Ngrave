@@ -21,11 +21,6 @@
 }
 
 @media (max-width: 1200px) {
-  .section5 {
-    background: red;
-    padding-inline: 5%;
-  }
-
   .section5 > div > h1 {
     font-size: 30px;
     line-height: normal;
@@ -42,32 +37,6 @@
   } 
 }
 
-@media (max-width: 1024px) {
-  .section5 {
-    background: orange;
-  }
-}
+@media (max-width: 400px) {
 
-@media (max-width: 1000px) {
-  .section5 {
-    background: yellow;
-  }
-}
-
-@media (max-width: 800px) {
-  .section5 {
-    background: blue;
-  }
-}
-
-@media (max-width: 600px) {
-  .section5 {
-    background: gray;
-  }
-}
-
-@media (max-width: 450px) {
-  .section5 {
-    background: green;
-  }
 }

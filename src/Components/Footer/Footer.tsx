@@ -6,13 +6,13 @@ function Footer() {
   return (
     <div>
       <footer className={`${Styles.footer} flex justify-center`}>
-        <div className='max-w-[1400px] bg-black px-[5%]'>
+        <div className='max-w-[1400px] bg-black px-[5%] overflow-hidden'>
           <div className='pb-[40px] flex lg:flex-row flex-col justify-between gap-4'>
-            <div className='flex justify-center basis-[25%]'>
+            <div className='flex justify-center'>
               <img src={ngravelogo} alt="ngravelogo" width='200' className='self-start bg-white'/>
             </div>
 
-            <div className={`${Styles.footer_grid} flex-1 text-[14px] font-semibold bg-amber-900`}>
+            <div className={`${Styles.footer_grid} basis-[50%] text-[14px] font-semibold`}>
               <div>
                 <h2>Products</h2>
                 <ul>
@@ -58,10 +58,12 @@ function Footer() {
               </div>
             </div>
 
-            <div className='basis-[38%]'>
-              <h1 className='text-[30px] font-semibold'>Get the latest news</h1>
+            <div className={`${Styles.footer_form}`}>
+              <div>
+                <h1 className='text-[30px] font-semibold'>Get the latest news</h1>
 
-              <p className='text-gray-500 mb-[20px]'>Be the first to hear about new features and exclusive offers.</p>
+                <p className='text-gray-500 mb-[20px]'>Be the first to hear about new features and exclusive offers.</p>
+              </div>
 
               <form action="" className=''>
                 <div className='flex relative rounded-3xl overflow-hidden border-1 border-gray-700 mb-[20px]'>

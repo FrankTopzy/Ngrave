@@ -15,8 +15,18 @@
   font-size: 13px;
 }
 
-@media (max-width: 450px) {
-  .footer {
-    display: none;
+@media (max-width: 630px) {
+  .footer_grid {
+    display: flex;
+    flex-direction: column;
   }
+  
+  .footer_form {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 450px) {
+
 }

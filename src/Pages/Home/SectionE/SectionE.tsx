@@ -8,20 +8,22 @@ import Styles from './sectionE.module.css';
 function SectionE() {
   return (
     <div>
-      <section className={`${Styles.section5} slide_in_top py-[100px] bg-[var(--text-color)] text-[var(--background-color)] flex justify-center`}>
-        <div className='max-w-[1400px]'>
-          <h1 className='flex flex-col text-[52px] mb-[100px] text-gray-500 leading-14'>
+      <section className={`${Styles.section5} slide_in_top bg-[var(--text-color)] text-[var(--background-color)] flex justify-center`}>
+        <div className='max-w-[1400px] py-[70px]  overflow-hidden'>
+          <h1 className='flex flex-col text-[52px] mb-[70px] text-gray-500 leading-14'>
             Built with the
             <span className='font-semibold text-black'>best materials</span>
           </h1>
 
-          <div className='rounded-4xl overflow-hidden mb-[30px]'>
-            <img src={bg1} alt="" className='w-full h-[800px]'/>
+          <div className='rounded-4xl mb-[30px] overflow-hidden'>
+            <img src={bg1} alt="" className=' w-full h-[800px] object-center object-cover'/>
           </div>
 
           <div className={`${Styles.section5_main_content} flex md:flex-row flex-col justify-between gap-4`}>
-            <div className={`${Styles.discover_link} relative flex flex-col pb-[40px] gap-[70px] rounded-3xl bg-[#f0f0f0]`}>
-              <img src={subBg10} alt="" />
+            <div className={`${Styles.discover_link} relative flex flex-col pb-[30px] gap-[70px] rounded-3xl bg-[#f0f0f0]`}>
+              <div>
+                <img src={subBg10} alt="" />
+              </div>
 
               <h2 className={`${Styles.subText} text-[2rem] text-black leading-10 flex flex-col font-semibold px-[40px]`}>
                 World's highest security-certified
