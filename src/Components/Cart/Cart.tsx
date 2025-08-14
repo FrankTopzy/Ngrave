@@ -40,7 +40,7 @@ function Cart() {
     return () => {
       cartbar?.current?.removeEventListener('click', handler)
     }
-  }, [cartbar?.current?.style]);
+  }, []);
 
   return (
     <div className={`${Styles.cart_container} w-full min-h-[100vh] flex justify-end transition duration-200`} ref={cartbar}>
