@@ -2,7 +2,7 @@ import Styles from './cart.module.css';
 //import item1 from '../../assets/shopItems/COMBO-1.webp'
 import delIcon from '../../assets/icons/del_icon.png';
 import { useContext, useEffect, useRef } from 'react';
-import { ProductsContext } from '../context';
+import { ProductsContext, type Cart } from '../context';
 
 // SHOP CART //
 function Cart() {
@@ -11,7 +11,7 @@ function Cart() {
   let total = 0;
 
   // This function helps in increment and decrement of cart counts //
-  function countAction(action: string, id: number) {
+  function countAction(action: string, id: number): Cart[] | void {
     if (!setCart) return;
 
     setCart(prev => prev.map(item => {

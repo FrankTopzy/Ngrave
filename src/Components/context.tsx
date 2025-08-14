@@ -2,7 +2,7 @@ import React, { createContext, useRef, useState, type Dispatch, type SetStateAct
 import type { Product } from "./ProductCard/types";
 import { products } from "../Data/products";
 
-interface Cart extends Product { // THIS IS THE CART TYPE ORCHESTRATED FROM THE PRODUCT TYPE //
+export interface Cart extends Product { // THIS IS THE CART TYPE ORCHESTRATED FROM THE PRODUCT TYPE //
   count: number;
 }
 
@@ -15,7 +15,7 @@ interface ProductsContextType { // THIS IS THE PROP.CHILDREN TYPE //
   cartbar: React.RefObject<HTMLDivElement | null>;
 }
 
-export const ProductsContext = createContext<ProductsContextType | null>(null);
+export const ProductsContext:  React.Context<ProductsContextType | null> = createContext<ProductsContextType | null>(null);
 
 type ProductsContextProps = { // THIS IS THE CONTEXT TYPE //
   children: React.ReactNode;

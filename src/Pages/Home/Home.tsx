@@ -17,8 +17,8 @@ import Footer from '../../Components/Footer/Footer';
 
 // HOME PAGE / LANDING PAGE //
 function Home() {
-  const gridContainer = useRef<HTMLDivElement>(null);
-  const scrollImg = useRef<HTMLDivElement>(null);
+  const gridContainer: React.RefObject<HTMLDivElement | null> = useRef<HTMLDivElement>(null);
+  const scrollImg: React.RefObject<HTMLDivElement | null> = useRef<HTMLDivElement>(null);
 
   /*const gridRect: DOMRect | undefined = gridContainer.current?.getBoundingClientRect();
   //console.log(gridRect?.left);
@@ -35,7 +35,7 @@ function Home() {
    
 
   //scroll by dragging
-  let isDown = false;
+  let isDown:boolean = false;
   let startX: number;
   let scrollLeft: number;
 
@@ -60,7 +60,7 @@ function Home() {
 
     if (gridContainer.current) {
       const x: number = e.pageX - gridContainer.current.offsetLeft;
-      const walk = (x - startX) * 100;
+      const walk:number = (x - startX) * 100;
       gridContainer.current.scrollLeft = scrollLeft - walk;
     }
   });
