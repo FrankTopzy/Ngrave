@@ -7,7 +7,7 @@ function SectionH() {
 
   return (
     <section className={`${Styles.sectionH} pb-[70px] pt-[100px] flex justify-center px-[5%] overflow-hidden`}>
-      <div className='max-w-[1400px]'>
+      <div className='max-w-[1400px] flex md:flex-row flex-col justify-between'>
         <div className=''>
           <h1 className='text-gray-500 text-[52px] mb-[40px]'>
             <p>Still got some</p>
@@ -20,7 +20,7 @@ function SectionH() {
           </div>
         </div>
 
-        <div className={`${Styles.dropdown} flex justify-center flex-col`}>
+        <div className={`${Styles.dropdown} flex justify-center flex-col basis-[50%]`}>
           <hr />
 
           <div className={`my-[10px]`}>
