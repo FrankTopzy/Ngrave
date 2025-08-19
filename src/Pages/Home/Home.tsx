@@ -14,6 +14,7 @@ import SectionF from './SectionF/SectionF';
 import SectionG from './SectionG/SectionG';
 import SectionH from './SectionH/SectionH';
 import Footer from '../../Components/Footer/Footer';
+import BlobCursor from '../../../Components/BlobCursor/BlobCursor.tsx';
 
 // HOME PAGE / LANDING PAGE //
 function Home() {
@@ -258,9 +259,11 @@ function Home() {
       <SectionH />
       <Footer />
 
-      <a href='#section1' className='fixed right-[50px] bottom-[50px]  bg-[var(--link-color)]'>
+      <a href='#section1' className='fixed right-[50px] bottom-[50px] z-10  bg-[var(--link-color)]'>
         up
       </a>
+
+      <BlobCursor/>
     </div>
   )
 }

@@ -1,6 +1,6 @@
 import React, { createContext, useRef, useState, type Dispatch, type SetStateAction } from "react";
 import type { Product } from "./ProductCard/types";
-import { products } from "../Data/products";
+//import { products } from "../Data/products";
 
 export interface Cart extends Product { // THIS IS THE CART TYPE ORCHESTRATED FROM THE PRODUCT TYPE //
   count: number;
