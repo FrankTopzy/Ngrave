@@ -14,7 +14,8 @@ import SectionF from './SectionF/SectionF';
 import SectionG from './SectionG/SectionG';
 import SectionH from './SectionH/SectionH';
 import Footer from '../../Components/Footer/Footer';
-import BlobCursor from '../../../Components/BlobCursor/BlobCursor.tsx';
+//import BlobCursor from '../../../Components/NeonCursor/NeonCursor.tsx';
+import RainbowCursor from '../../../Components/RainbowCursor/RainbowCursor.tsx';
 
 // HOME PAGE / LANDING PAGE //
 function Home() {
@@ -263,7 +264,7 @@ function Home() {
         up
       </a>
 
-      <BlobCursor/>
+      <RainbowCursor/>
     </div>
   )
 }
